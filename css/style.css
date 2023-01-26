@@ -51,13 +51,10 @@ html.has-scroll-dragging {
   position: absolute;
   right: 0;
   top: 0;
-  width: 11px;
+  width: 10px;
   height: 100%;
   transform-origin: center right;
-  transition: transform 0.3s;
   opacity: 1; }
-  .c-scrollbar:hover {
-    transform: scaleX(1.2); }
   .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
     opacity: 1; }
   [data-scroll-direction="horizontal"] .c-scrollbar {
@@ -200,6 +197,7 @@ main {
   text-transform: uppercase;
   color: #2b1f31;
   font-weight: 700;
+  transition: color 0.4s linear;
 }
 
 .navbar-container .navbar-bottom .home {
@@ -229,6 +227,10 @@ main {
   justify-content: right;
   grid-column-start: 4;
   grid-column-end: 5;
+}
+
+.navbar-container .navbar-bottom a:hover {
+  color: #5fb9b0;
 }
 
 #home-container {
@@ -386,6 +388,38 @@ main {
   animation-timing-function: linear;
 }
 
+.ctl {
+  z-index: 10;
+  bottom: 0;
+  width: 65vw;
+  left: 0;
+}
+
+.ctr {
+  z-index: 10;
+  bottom: 0;
+  width: 65vw;
+  right: 0;
+  
+}
+
+.ctm {
+  z-index: 10;
+  bottom: 190px;
+  width: 65vw;
+  left: 300px;
+}
+
+.ctrb {
+  z-index: 2;
+  top: 800px;
+  width: 75vw;
+  right: -200px;
+  animation-name: cloudmove;
+  animation-duration: 300s;
+  animation-timing-function: linear;
+}
+
 @keyframes fall {
   0% {
     transform: translateY(0px);
@@ -399,7 +433,7 @@ main {
   z-index: 9;
   position: absolute;
   width: 5.5vw;
-  top: 800px;
+  top: 45vw;
   left: 52vw;
   animation-name: fall;
   animation-duration: 50s;
