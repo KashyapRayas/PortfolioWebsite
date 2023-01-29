@@ -35,19 +35,29 @@
                 </div>
             </div>
         <div class="navbar-bottom">
-            <a id="1" class="home" href="">Home</a>
-            <a id="2" class="about" href="">About me</a>
-            <a id="3" class="contact" href="">Contact</a>
-            <a id="4" class="work" href="">Works</a>
+            <a id="home" class="home" href="#home-container">Home</a>
+            <a id="about" class="about" href="#about-container">About me</a>
+            <a id="contact" class="contact" href="">Contact</a>
+            <a id="works" class="work" href="">Works</a>
         </div>
     </div>
 
     <main>
         <div id="js-scroll">
+            <div data-scroll-section class="front-rocks">
+                <img data-scroll data-scroll-speed="15" src="/assets/rock-front-2.png" alt="" class="rock-front-2">
+            </div>
+            <div data-scroll-section class="front-clouds">
+                <img src="/assets/cloudleft.png" alt="" class="cloud ctl">
+                <img src="/assets/cloudright.png" alt="" class="cloud ctr">
+            </div>
+            <div class="fallin-container">
+                <img src="/assets/fallin.png" alt="" class="fallin">
+            </div>
+
             <div data-scroll-section id="home-container">
                 <img src="/assets/nav-rock.png" alt="" class="nav-rock">
                 <img data-scroll data-scroll-speed="9" src="/assets/rock-front.png" alt="" class="rock-front">
-                <img src="/assets/fallin.png" alt="" class="fallin">
                 <img data-scroll data-scroll-speed="7" src="/assets/hero-rock.png" alt="" class="hero-rock">
                 <img src="/assets/rock-back.png" alt="" class="rock-back">
                 <div data-scroll data-scroll-speed="2" class="background-rectangle"></div>
@@ -56,10 +66,16 @@
                 <img src="/assets/cloud3.png" alt="" class="cloud c3">
                 <img src="/assets/cloud6.png" alt="" class="cloud c6">
                 <img src="/assets/cloud6.png" alt="" class="cloud c6b">
-                <img src="/assets/cloudleft.png" alt="" class="cloud ctl">
-                <img src="/assets/cloudright.png" alt="" class="cloud ctr">
                 <img src="/assets/cloud2.png" alt="" class="cloud ctrb">
-                <img data-scroll data-scroll-speed="5" data-scroll-direction="horizontal" src="/assets/cloud2.png" alt="" class="cloud ctm">
+            </div>
+
+            <div data-scroll-section id="about-container">
+
+                <h3 data-scroll data-scroll-speed="3" class="text1">Before I explain why<br>I’m falling, let me tell you<br>a bit about myself..</h3>
+                <h3 data-scroll data-scroll-speed="7" class="text2">I'm 21 years old &<br>with a background<br>in Graphic Design,<br>I bring stories to life<br>using creative &<br>unconventional<br>designs.</h3>
+                <img src="/assets/cloudleft.png" alt="" class="cloud cta1">
+                <img src="/assets/cloud3.png" alt="" class="cloud c3 ca3">
+                <div class="background-rectangle"></div>
             </div>
         </div>
     </main>
