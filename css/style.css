@@ -8,10 +8,9 @@ dark purple - 2b1f31
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  /* text-rendering: geometricPrecision; */
+  text-rendering: optimizeSpeed;
 }
 
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
     overflow: hidden;
     position: absolute;
@@ -86,6 +85,7 @@ html.has-scroll-dragging {
     bottom: 0; }
 
 
+
 body {
   margin: 0;
   padding: 0;
@@ -95,6 +95,8 @@ body {
   background-color: white;
 }
 
+/* preloader */
+
 .loading {
   position: absolute;
   width: 100%;
@@ -102,6 +104,8 @@ body {
   background-color: white;
   z-index: 99;
 }
+
+/* main  */
 
 main {
   height: auto;
@@ -113,13 +117,13 @@ main {
   height: auto;
 }
 
+/* NAV  */
+
 .navbar-container {
   padding: 0;
   margin: 0;
   position: fixed;
   top: 1em;
-  width: auto;
-  height: auto;
   z-index: 25;
   transform: scale(0.9);
 }
@@ -235,6 +239,8 @@ main {
   opacity: 0.5;
 }
 
+/* HOME  */
+
 #home-container {
   position: relative;
   width: 100%;
@@ -261,7 +267,10 @@ main {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 100px;
+  top: 120px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+
 }
 
 .background-rectangle {
@@ -302,18 +311,6 @@ main {
   
 }
 
-.nav-rock {
-  position: absolute;
-  z-index: 10;
-  left: 0px;
-  width: 33vw;
-  top: 0px;
-  animation-name: rockmove1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out
-}
-
 .hero-text span {
   color: #413d65;
   letter-spacing: 0.03em;
@@ -324,10 +321,7 @@ main {
   z-index: 10;
   left: 0px;
   width: 48vw;
-  top: 400px;
-  /* animation-name: rockmove1;
-  animation-duration: 15s;
-  animation-iteration-count: infinite; */
+  top: 500px;
 }
 
 .rock-back {
@@ -347,23 +341,21 @@ main {
     transform: translateX(0vw);
   }
   100% {
-    transform: translateX(90vw);
+    transform: translateX(170vw);
   }
 }
 
 .cloud {
   position: absolute;
-  /* z-index: 10; */
   z-index: 2;
-  /* border: 1px solid black; */
 }
 
 .c3 {
   width: 30vw;
   top: 300px;
-  left: -150px;
+  left: -30vw;
   animation-name: cloudmove;
-  animation-duration: 50s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
 }
@@ -371,10 +363,10 @@ main {
 .c6 {
   z-index: 5;
   width: 45vw;
-  top: 790px;
-  left: -550px;
+  top: 1250px;
+  left: -45vw;
   animation-name: cloudmove;
-  animation-duration: 50s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -383,7 +375,7 @@ main {
   z-index: 5;
   width: 50vw;
   top: 1300px;
-  left: -270px;
+  left: -50vw;
   animation-name: cloudmove;
   animation-duration: 50s;
   animation-iteration-count: infinite;
@@ -393,11 +385,13 @@ main {
 .c1 {
   z-index: 8;
   width: 65vw;
-  top: 900px;
-  right: -100px;
+  top: 650px;
+  left: -65vw;
   animation-name: cloudmove;
-  animation-duration: 50s;
+  animation-duration: 20s;
+  animation-delay: 1.5s;
   animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .front-clouds {
@@ -441,10 +435,10 @@ main {
 
 @keyframes fall {
   0% {
-    top: 45vw;
+    top: 0vw;
   }
   100% {
-    top: 110vw;
+    top: 20vw;
   }
 }
 
@@ -461,10 +455,10 @@ main {
   width: 4.5vw;
   top: 20vw;
   left: 49vw;
-  /* animation-name: fall;
-  animation-duration: 30s;
-  animation-timing-function: linear; */
+  animation: fall 10s linear;
 }
+
+/* ABOUT  */
 
 #about-container {
   position: relative;
@@ -497,7 +491,7 @@ main {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 200px;
+  top: 100px;
 
 }
 
@@ -511,7 +505,7 @@ main {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 400px;
+  top: 200px;
 }
 
 .ca3 {
@@ -533,7 +527,7 @@ main {
   position: absolute;
   z-index: 20;
   width: 100%;
-  height: 400vh;
+  height: 410vh;
   top: 0;
 }
 
