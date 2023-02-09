@@ -1,7 +1,8 @@
 // declarations
     const loader = document.getElementById('loading')
     const body = document.querySelector('body')
-    const logo = document.querySelector('.logo');
+    const logo = document.querySelector('.logo')
+    const me = document.querySelector('.fallin')
 
 // scroll
     const lscroll = new LocomotiveScroll({
@@ -10,6 +11,19 @@
         lerp: 0.02,
         direction: 'vertical'
     });
+
+    function fallin_animation() {
+        let fallin_anime = anime.timeline({
+            easing: 'linear',
+            autoplay: true
+        })
+        fallin_anime.add({
+            targets: 'main #home-container .fallin',
+            keyframes: [
+                {translateY: 2*me.offsetHeight, duration: 40000}
+            ]
+        });
+    }
 
     function nav_logo_animation() {
         let logo_anime = anime.timeline({
@@ -67,11 +81,11 @@
         logo.onmouseover = logo_anime.play
     }
 
+    
     function loader_logo_animation() {
         let logo_anime = anime.timeline({
             easing: 'cubicBezier(0.215, 0.610, 0.355, 1.000)',
-            autoplay: true,
-            loop: true
+            autoplay: true
         });
         logo_anime.add({
             targets: '.loading-logo-container .logo1 .R',
@@ -120,17 +134,53 @@
             keyframes: [
                 {rotateX: 0, translateX: -73.53, duration: 700, translateY:0.3}
             ]
-        }, '-=200');
+        }, '-=200')
+        .add({
+            targets: '.loading-logo-container .logo1 .R',
+            keyframes: [
+                {duration: 1000}
+            ]
+        }, '+=1000');
     }
-    window.addEventListener('load', loader_logo_animation())
+
+    function loader_exit_animation() {
+        let loadexit_anime = anime.timeline({
+            easing: 'easeInOutSine',
+            autoplay: true
+        })
+        loadexit_anime.add({
+            targets: '#loading .page1',
+            keyframes: [
+                {translateY: `-${window.innerHeight}`, duration: 800}
+            ]
+        })
+        .add({
+            targets: '#loading .page2',
+            keyframes: [
+                {translateY: `-${window.innerHeight}`, duration: 500}
+            ]
+        }, '-=200')
+        .add({
+            targets: '#loading .page3',
+            keyframes: [
+                {translateY: `-${window.innerHeight}`, duration: 400}
+            ]
+        }, '-=300')
+    }
+
+    window.setTimeout(loader_logo_animation, 1000)
     function preloader() {
-        loader.style.display = 'none'
+        loader_exit_animation()
+        fallin_animation()
+        window.setTimeout(function(){
+        })
     }
 
 
 
     imagesLoaded( body, function( instance ) {
-        window.setTimeout(preloader, 5000)
+        me.style.top = `-${me.offsetHeight}px`
+        window.setTimeout(preloader, 6000)
         console.log('all images are loaded')
         lscroll.update()
     });
