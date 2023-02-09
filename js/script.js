@@ -8,7 +8,7 @@
     const lscroll = new LocomotiveScroll({
         el: document.querySelector('#js-scroll'),
         smooth: true,
-        lerp: 0.02,
+        lerp: 0.03,
         direction: 'vertical'
     });
 
@@ -20,9 +20,9 @@
         fallin_anime.add({
             targets: 'main #home-container .fallin',
             keyframes: [
-                {translateY: 2*me.offsetHeight, duration: 40000}
+                {translateY: window.innerHeight+2*me.offsetHeight, duration: 50000}
             ]
-        });
+        }, '+=2000');
     }
 
     function nav_logo_animation() {
@@ -83,6 +83,7 @@
 
     
     function loader_logo_animation() {
+
         let logo_anime = anime.timeline({
             easing: 'cubicBezier(0.215, 0.610, 0.355, 1.000)',
             autoplay: true
@@ -168,7 +169,41 @@
         }, '-=300')
     }
 
-    window.setTimeout(loader_logo_animation, 1000)
+    function loader_text_animation() {
+        var wrapperText1 = document.querySelector('.h11')
+        wrapperText1.innerHTML = wrapperText1.textContent.replace(
+            /\S/g, "<span class='letter'>$&</span>"
+        )
+        var wrapperText2 = document.querySelector('.h12')
+        wrapperText2.innerHTML = wrapperText2.textContent.replace(
+            /\S/g, "<span class='letter'>$&</span>"
+        )
+        let text_anime = anime.timeline({
+            easing: 'easeInOutSine',
+            autoplay: true
+        })
+        text_anime.add({
+            targets: '.h11 .letter',
+            translateY: [0, -23.5],
+            easing: 'easeOutExpo',
+            opacity: 1,
+            duration: 1700,
+            delay: (el, i) => 400+70*i
+        }, '+=1000')
+        .add({
+            targets: '.h12 .letter',
+            translateY: [0, -23.5],
+            easing: 'easeOutExpo',
+            opacity: 1,
+            duration: 1700,
+            delay: (el, i) => 400+70*i 
+        }, '+=1500');
+    }
+
+    loader_text_animation()
+    window.setTimeout(function() {
+        window.addEventListener('load', loader_logo_animation())
+    }, 2500)
     function preloader() {
         loader_exit_animation()
         fallin_animation()
@@ -180,7 +215,7 @@
 
     imagesLoaded( body, function( instance ) {
         me.style.top = `-${me.offsetHeight}px`
-        window.setTimeout(preloader, 6000)
+        window.setTimeout(preloader, 7500)
         console.log('all images are loaded')
         lscroll.update()
     });

@@ -141,9 +141,26 @@ body {
 }
 
 #loading h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #2b1f31;
-  font-weight: 600;
+  font-weight: 610;
+  /* text-transform: uppercase; */
+}
+
+#loading .text-container1 {
+  overflow: hidden;
+  height: 3em;
+  transform: translateY(0.9em);
+}
+
+#loading .text-container2 {
+  overflow: hidden;
+  height: 3em;
+  transform: translateY(-1.2em);
+}
+
+#loading .letter {
+  display: inline-block;
 }
 
 #loading .top {
@@ -152,11 +169,11 @@ body {
 }
 
 #loading .top .h11 {
-  padding-top: 0.2em;
+  padding-top: 24px;
 }
 
 #loading .h12 {
-  transform: translateY(-1em);
+  padding-top: 23px;
 }
 
 
@@ -168,6 +185,7 @@ body {
 
 .loading-logo-container {
   position: relative;
+  top: 0;
 }
 
 
