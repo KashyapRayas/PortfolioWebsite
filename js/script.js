@@ -8,7 +8,7 @@
     const lscroll = new LocomotiveScroll({
         el: document.querySelector('#js-scroll'),
         smooth: true,
-        lerp: 0.03,
+        lerp: 0.05,
         direction: 'vertical'
     });
 
