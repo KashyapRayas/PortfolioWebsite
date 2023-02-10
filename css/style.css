@@ -111,7 +111,34 @@ body {
   background-color: white;
   top: 0;
   z-index: 4;
+  display: flex;
+  justify-content: center;
 }
+
+#loading .page1 .p1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: absolute;
+  left: 42%;
+  top: 2%;
+  color: #2b1f31;
+}
+
+#loading .page1 .p2 {
+  font-size: 1.1rem;
+  width: 100%;
+  font-weight: 600;
+  position: absolute;
+  bottom: 8%;
+  right: 2.5%;
+  color: #2b1f31;
+}
+
+#loading .page1 .p2 span {
+  color: #413d65;
+  font-style: italic;
+}
+
 
 #loading .page2 {
   position: absolute;
@@ -136,8 +163,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  left: 40%;
-  top: 30%;
+  left: 38%;
+  top: 33%;
 }
 
 #loading h1 {
