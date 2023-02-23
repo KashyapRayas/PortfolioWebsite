@@ -8,19 +8,25 @@
     const lscroll = new LocomotiveScroll({
         el: document.querySelector('#js-scroll'),
         smooth: true,
-        lerp: 0.05,
-        direction: 'vertical'
+        lerp: 0.02,
+        direction: 'vertical',
+        scrollFromAnywhere: true,
+        smoothMobile: true,
+        smartphone: {
+            lerp: 0.01
+        }
     });
 
     function fallin_animation() {
         let fallin_anime = anime.timeline({
-            easing: 'linear',
+            easing: 'easeOutSine',
             autoplay: true
         })
         fallin_anime.add({
-            targets: 'main #home-container .fallin',
+            targets: '.fallin-container .fallin',
             keyframes: [
-                {translateY: window.innerHeight+2*me.offsetHeight, duration: 50000}
+                {translateY: -me.offsetHeight, duration: 0},
+                {translateY: (window.innerHeight)/2, duration: 4000}
             ]
         }, '+=2000');
     }
@@ -152,19 +158,19 @@
         loadexit_anime.add({
             targets: '#loading .page1',
             keyframes: [
-                {translateY: `-${window.innerHeight}`, duration: 800}
+                {translateY: `-${window.screen.height}`, duration: 800}
             ]
         })
         .add({
             targets: '#loading .page2',
             keyframes: [
-                {translateY: `-${window.innerHeight}`, duration: 500}
+                {translateY: `-${window.screen.height}`, duration: 500}
             ]
         }, '-=200')
         .add({
             targets: '#loading .page3',
             keyframes: [
-                {translateY: `-${window.innerHeight}`, duration: 400}
+                {translateY: `-${window.screen.height}`, duration: 400}
             ]
         }, '-=300')
     }
@@ -207,20 +213,13 @@
     function preloader() {
         loader_exit_animation()
         fallin_animation()
-        window.setTimeout(function(){
-        })
     }
 
-
-
     imagesLoaded( body, function( instance ) {
-        me.style.top = `-${me.offsetHeight}px`
-        window.setTimeout(preloader, 7500)
-        console.log('all images are loaded')
+        window.setTimeout(preloader, 7500) //7500
+        // console.log('all images are loaded')
         lscroll.update()
     });
-
-    // history.scrollRestoration = 'manual'
 
 // nav logo animation
     logo.addEventListener('mouseover', nav_logo_animation())
