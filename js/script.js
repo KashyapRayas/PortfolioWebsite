@@ -216,7 +216,7 @@
     }
 
     imagesLoaded( body, function( instance ) {
-        window.setTimeout(preloader, 7500) //7500
+        window.setTimeout(preloader, 500) //7500
         // console.log('all images are loaded')
         lscroll.update()
     });
