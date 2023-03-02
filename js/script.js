@@ -3,6 +3,9 @@
     const body = document.querySelector('body')
     const logo = document.querySelector('.logo')
     const me = document.querySelector('.fallin')
+    const works_container = document.querySelector('#works-container')
+    const tvs = document.querySelector('.moving-tvs')
+    const highlight_text = document.querySelectorAll('.highlight')
 
 // scroll
     const lscroll = new LocomotiveScroll({
@@ -30,6 +33,41 @@
             ]
         }, '+=2000');
     }
+
+    function tv_animation() {
+        let tv_anime = anime.timeline({
+            easing: 'linear',
+            autoplay: true,
+            loop: true
+        })
+        tv_anime.add({
+            targets: '.moving-tvs',
+            keyframes: [
+                {translateX: 0, duration: 0},
+                {translateX: -(window.innerWidth+tvs.clientWidth), duration: 12000}
+            ]
+        }, '+=1000');
+    }
+
+    function navclick(flag) {
+        if(flag==1) lscroll.scrollTo('#home-container', 0)
+        if(flag==2) lscroll.scrollTo('#about-container', 0)
+        if(flag==3) lscroll.scrollTo('#works-container', 0)
+    }
+
+    lscroll.on('call', (flag)=>{
+        if(flag==='tv') {
+            tv_animation()
+            
+        }
+        else if(flag==='highlight') {
+            var i=2
+            highlight_text.forEach(element => {
+                element.style.animation = `2s highlight ${i+=0.5}s 1 normal forwards`
+            });
+            console.log('hi')
+        }
+    })
 
     function nav_logo_animation() {
         let logo_anime = anime.timeline({

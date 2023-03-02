@@ -58,6 +58,7 @@ html.has-scroll-dragging {
   transform-origin: center right;
   opacity: 0; 
   transition: opacity 0.5s linear;
+  mix-blend-mode: difference;
 }
   .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
     opacity: 1; }
@@ -74,7 +75,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #413d65;
+  background-color: #e6fdcb;
   opacity: 1;
   width: 12px;
   border-radius: 10px;
@@ -662,6 +663,26 @@ body {
   margin: 0 auto;
 }
 
+#about-container .c2 {
+  z-index: 8;
+  top: 20vh;
+  width: 40vw;
+  left: -40vw;
+  animation-name: cloudmove;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+}
+
+#about-container .c1 {
+  z-index: 9;
+  top: 80vh;
+  width: 45vw;
+  left: -45vw;
+  animation-name: cloudmove;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+}
+
 #about-container .background-rectangle-2 {
   position: absolute;
   background-color: #5fb9b0;
@@ -713,11 +734,25 @@ body {
   font-weight: 600;
   z-index: 8;
   right: 19vw;
-  top: 40vh;
+  top: 30vh;
 }
 
 .text1 .text2 {
   color: #413d65;
+}
+
+.highlight {
+  animation: none;
+  background-color: none;
+  background: linear-gradient(90deg, #5fb9b0 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+@keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
 }
 
 #about-container .rock-back {
@@ -731,20 +766,23 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   image-rendering: optimizeSpeed;
+  
 }
 
 #about-container .bottom-cover {
   position: absolute;
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   bottom: 0;
   background-color: #413d65;
   z-index: 6;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .about-rocks-container {
-  top: 200vh;
-  height: 450vh;
+  top: 245vh;
+  height: 300vh;
   width: 100vw;
   position: absolute;
   z-index: 15;
@@ -781,7 +819,7 @@ body {
 .rock-top .rock-falls {
   position: absolute;
   z-index: 7;
-  width: 37vw;
+  width: 43vw;
   left: 0;
   bottom: 0;
   image-rendering: optimizeSpeed;
@@ -790,20 +828,95 @@ body {
 .rock-bottom {
   position: relative;
   width: 100vw;
+  z-index: 2;
 }
 
 .rock-bottom .underground-cave {
   position: absolute;
   top: 0;
+  z-index: 3;
+  width: 100vw;
+}
+
+.rock-bottom .track-tv {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  z-index: 2;
+}
+
+.track-tv .tracks {
+  top: 50vh;
+  width: 80vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.track-tv .moving-tvs {
+  top: 25vh;
+  position: absolute;
+  width: 75vw;
+  z-index: 2;
+  right: -75vw;
 }
 
 
 #works-container {
   position: relative;
   width: 100vw;
-  height: 250vh;
+  height: 350vh;
   background-color: #413d65;
 }
+
+#works-container .hero-text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 10.5vw;
+  color: #bef992;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0vh;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+#works-container .rock-top-container {
+  position: absolute;
+  z-index: 3;
+  top: 32vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.rock-top-container .rock-top {
+  width: 65vw;
+  position: absolute;
+  animation-name: rockmove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#works-container .tv-rock-container {
+  position: absolute;
+  z-index: 4;
+  top: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.tv-rock-container .tv-rock {
+  width: 65vw;
+  position: absolute;
+}
+
+
+
 
 
 

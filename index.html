@@ -66,10 +66,10 @@
                 </div>
         </div>
         <div class="navbar-bottom">
-            <a id="home" class="home" href="#home-container">Home</a>
-            <a id="about" class="about" href="#about-container">About me</a>
-            <a id="contact" class="contact" href="">Contact</a>
-            <a id="works" class="work" href="">Works</a>
+            <a id="home" onclick='navclick(1)' class="home" href="#">Home</a>
+            <a id="about" onclick='navclick(2)' class="about" href="#">About me</a>
+            <a id="contact" class="contact" href="#">Contact</a>
+            <a id="works" onclick='navclick(3)' class="work" href="#">Works</a>
         </div>
     </div>
 
@@ -103,27 +103,39 @@
             </div>
 
             <div data-scroll-section id="about-container" class="page">
+                <img src="/assets/cloud2.png" alt="" class="cloud c2">
+                <img src="/assets/cloud1.png" alt="" class="cloud c1">
                 <div data-scroll data-scroll-speed="2" class="background-rectangle-1"></div>
                 <div data-scroll data-scroll-speed="4" class="background-rectangle-2"></div>
                 <p data-scroll data-scroll-speed="5" class="hero-text"><span>ABOUT </span>ME</p>
-                <p data-scroll data-scroll-speed="8" class="text1">21<br>YEARS<br>OLD WITH<br>A PASSION<br>FOR GRAPHIC<br>DESIGN & CREATIVE<br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY PURSUING<br>A DEGREE IN<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
+                <p data-scroll data-scroll-speed="9" data-scroll-call="highlight" class="text1">21<br>YEARS<br>OLD WITH<br>A <span class="highlight">PASSION</span><br>FOR GRAPHIC<br>DESIGN & <span class="highlight">CREATIVE</span><br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY PURSUING<br>A DEGREE IN<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
                 <img data-scroll data-scroll-speed="2" src="/assets/about-rock-back.png" class="rock-back">
                 <img data-scroll data-scroll-speed="7" src="/assets/face2.png" class="about-face">
                 <div class="bottom-cover"></div>
             </div>
 
             <div data-scroll-section id="works-container" class="page">
-
+                <p data-scroll-speed="5" class="hero-text">WORKS</p>
+                <div data-scroll data-scroll-speed="7" class="rock-top-container">
+                    <img src="/assets/rock-top.png" class="rock-top">
+                </div>
+                <div data-scroll data-scroll-speed="9" class="tv-rock-container">
+                    <img src="/assets/tv-rocks.png" class="tv-rock">
+                </div>
             </div>
 
             <div data-scroll-section class="about-rocks-container">
-                <div data-scroll data-scroll-speed="10" class="about-rocks">
+                <div data-scroll data-scroll-repeat data-scroll-call="tv" data-scroll data-scroll-speed="12" class="about-rocks">
                     <div class="rock-top">
                         <img src="/assets/about-rock-front.png" class="rock-front">
                         <img src="/assets/about-rock-falls.png" class="rock-falls">
                     </div>
                     <div class="rock-bottom">
-                        <img src="/assets/underground-cave.png" alt="">
+                        <img src="/assets/underground-cave2.png" class="underground-cave" alt="">
+                        <div class="track-tv">
+                            <img src="/assets/movingtv.png" class="moving-tvs" alt="">
+                            <img src="/assets/tracks.png" class="tracks" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
