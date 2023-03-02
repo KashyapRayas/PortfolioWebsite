@@ -273,6 +273,7 @@ body {
   position: absolute;
   width: 100vw;
   top: 0;
+  z-index: 2;
 }
 
 /* navbar  */
@@ -587,6 +588,7 @@ body {
   z-index: 15;
   padding: 0;
   margin: 0;
+  pointer-events: none;
 }
 
 .ctr {
@@ -632,6 +634,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 
 .fallin {
@@ -641,6 +644,7 @@ body {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  pointer-events: none;
 }
 
 #about-container {
@@ -890,6 +894,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
+  pointer-events: none;
 }
 
 .rock-top-container .rock-top {
@@ -915,6 +920,131 @@ body {
   position: absolute;
 }
 
+.work1 {
+  background-color: #bef992;
+  z-index: 5;
+  position: absolute;
+  top: 3.55vw;
+  width: 27.9vw;
+  height: 19.2vw;
+  left: 38.2vw;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+
+.work1 .container-title {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  padding-bottom: 0.7vw;
+  padding-left: 1vw;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  transition: all 0.5s ease-in-out;
+  color: #2b1f31;
+}
+
+.work1 .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  padding-top: 1vw;
+  padding-right: 1vw;
+  width: 2.5vw;
+  margin: 0;
+  font-size: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.work1:hover {
+  background-color: white;
+}
+
+.work1:hover > .arrow {
+  padding: 2vw;
+  transform: rotate(180deg);
+  filter: invert(70%) sepia(6%) saturate(2553%) hue-rotate(125deg) brightness(124%) contrast(48%);
+}
+
+.work1:hover > .container-title {
+  padding-bottom: 2.2vw;
+  padding-left: 2.5vw;
+  color: #413d65;
+}
+
+.work1-page {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  top: 0;
+  opacity: 0;
+  display: none;
+  /* pointer-events: none; */
+  transition: all 0.5s linear;
+  margin: 0;
+  padding: 0;
+}
+
+.close-button-container {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  cursor: pointer;
+  height: 3vw;
+  width: 3vw;
+}
+
+.close-button {
+  position: absolute;
+  top: 1.3vw;
+  width: 3em;
+  height: 0.3em;
+  background-color: #2b1f31;
+  transform: rotate(225deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.close-button::before {
+  content: "";
+  position: absolute;
+  width: 3em;
+  height: 0.3em;
+  background-color: #2b1f31;
+  top: 0vw; /*-1vw */
+  left: 0vw;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.close-button::after {
+  content: "";
+  position: absolute;
+  width: 3em;
+  height: 0.3em;
+  background-color: #2b1f31;
+  top: 0vw;
+  left: 0vw;
+  transform: rotate(90deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.close-button-container:hover>.close-button::before {
+  transform: rotate(-45deg);
+  top: -0.8vw;
+  left: -0.25vw;
+  width: 2.2em;
+}
+
+.close-button-container:hover>.close-button::after {
+  transform: rotate(45deg);
+  top: 0.8vw;
+  left: -0.25vw;
+  width: 2.2em;
+}
 
 
 

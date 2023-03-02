@@ -6,6 +6,9 @@
     const works_container = document.querySelector('#works-container')
     const tvs = document.querySelector('.moving-tvs')
     const highlight_text = document.querySelectorAll('.highlight')
+    const work1 = document.querySelector('.work1')
+    const work1_page = document.querySelector('.work1-page')
+    const close_button = document.querySelector('.close-button-container')
 
 // scroll
     const lscroll = new LocomotiveScroll({
@@ -65,7 +68,6 @@
             highlight_text.forEach(element => {
                 element.style.animation = `2s highlight ${i+=0.5}s 1 normal forwards`
             });
-            console.log('hi')
         }
     })
 
@@ -261,4 +263,33 @@
 
 // nav logo animation
     logo.addEventListener('mouseover', nav_logo_animation())
+    work1.addEventListener('click', ()=>{
+        work1.style.width = '100vw'
+        work1.style.height = '100vh'
+        work1.style.top = '0'
+        work1.style.left = '0'
+        work1.style.backgroundColor = 'white'
+        work1.style.boxShadow = '30vw 10vw 10vw 10vw white'
+        document.querySelector('.work1 .elements').style.display = 'none'
+        work1_page.style.display = 'block'
+        lscroll.stop()
+        window.setTimeout(()=>{
+            work1_page.style.opacity = 1
+        }, 200)
+    })
+    close_button.addEventListener('click', ()=>{
+        work1_page.style.opacity = 0
+        work1.style.width = '27.9vw'
+        work1.style.height = '19.2vw'
+        work1.style.top = '3.55vw'
+        work1.style.left = '38.2vw'
+        work1.style.backgroundColor = '#bef992'
+        work1.style.boxShadow = 'none'
+        document.querySelector('.work1 .elements').style.display = 'block'
+        lscroll.start()
+        window.setTimeout(()=>{
+            work1_page.style.display = 'none'
+        }, 200)
+    })
+
     
