@@ -6,9 +6,12 @@
     const works_container = document.querySelector('#works-container')
     const tvs = document.querySelector('.moving-tvs')
     const highlight_text = document.querySelectorAll('.highlight')
-    const work1 = document.querySelector('.work1')
-    const work1_page = document.querySelector('.work1-page')
-    const close_button = document.querySelector('.close-button-container')
+    const close_button_list = document.querySelectorAll('.close-button-container')
+    const work_mini_list = document.querySelectorAll('.work_mini')
+    var wheight = 0
+    var wwidth = 0
+    var wtop = 0
+    var wleft = 0
 
 // scroll
 
@@ -265,37 +268,58 @@
 
 // nav logo animation
     logo.addEventListener('mouseover', nav_logo_animation())
-    work1.addEventListener('click', ()=>{
-        lscroll.stop()
-        work1.style.width = '200vw'
-        work1.style.height = '350vh'
-        work1.style.top = '-100vh'
-        work1.style.left = '-50vw'
-        work1.style.backgroundColor = 'white'
-        work1.style.boxShadow = '30vw 10vw 10vw 10vw white'
-        document.querySelectorAll('.work1 .elements').forEach(element => {
-            element.style.display = 'none'
-        })
-        work1_page.style.display = 'block'
-        window.setTimeout(()=>{
-            work1_page.style.opacity = 1
-        }, 200)
+
+    work_mini_list.forEach(element => {
+        element.addEventListener('click', ()=>{
+            let work_mini = element
+            work_mini.style.zIndex = '8'
+            wheight = work_mini.style.height
+            wwidth = work_mini.style.width
+            wtop = work_mini.style.top
+            wleft = work_mini.style.left
+            let work_mini_name = work_mini.className.substring(0, 5)
+            let project_page = document.getElementById(work_mini_name)
+            lscroll.stop()
+            window.setTimeout(()=>{
+                work_mini.style.width = '200vw'
+                work_mini.style.height = '350vh'
+                work_mini.style.top = '-100vh'
+                work_mini.style.left = '-50vw'
+                work_mini.style.backgroundColor = 'white'
+                work_mini.style.boxShadow = '30vw 10vw 10vw 10vw white'
+            }, 100)
+            document.querySelectorAll('.'+work_mini_name+' .elements').forEach(element => {
+                element.style.display = 'none'
+            })
+            project_page.style.display = 'grid'
+            window.setTimeout(()=>{
+                project_page.style.opacity = 1
+            }, 300)
+            })
     })
-    close_button.addEventListener('click', ()=>{
-        work1_page.style.opacity = 0
-        work1.style.width = '27.9vw'
-        work1.style.height = '19.2vw'
-        work1.style.top = '3.55vw'
-        work1.style.left = '38.2vw'
-        work1.style.backgroundColor = '#bef992'
-        work1.style.boxShadow = 'none'
-        document.querySelectorAll('.work1 .elements').forEach(element => {
-            element.style.display = 'block'
+
+    close_button_list.forEach(element => {
+        element.addEventListener('click', ()=>{
+            let close_button = element
+            let page = close_button.parentNode
+            let project_name = close_button.parentNode.id
+            let page_mini = document.querySelector('.'+project_name)
+            page.style.opacity = 0
+            page_mini.style.zIndex='5'
+            page_mini.style.width = wwidth
+            page_mini.style.height = wheight
+            page_mini.style.top = wtop
+            page_mini.style.left = wleft
+            page_mini.style.backgroundColor = '#bef992'
+            page_mini.style.boxShadow = 'none'
+            document.querySelectorAll('.'+project_name+' .elements').forEach(element => {
+                element.style.display = 'block'
+            })
+            lscroll.start()
+            window.setTimeout(()=>{
+                page.style.display = 'none'
+            }, 200)
         })
-        lscroll.start()
-        window.setTimeout(()=>{
-            work1_page.style.display = 'none'
-        }, 200)
     })
 
     
