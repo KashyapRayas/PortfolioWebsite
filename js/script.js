@@ -11,6 +11,7 @@
     const close_button = document.querySelector('.close-button-container')
 
 // scroll
+
     const lscroll = new LocomotiveScroll({
         el: document.querySelector('#js-scroll'),
         smooth: true,
@@ -258,21 +259,24 @@
     imagesLoaded( body, function( instance ) {
         window.setTimeout(preloader, 500) //7500
         // console.log('all images are loaded')
+        lscroll.start()
         lscroll.update()
     });
 
 // nav logo animation
     logo.addEventListener('mouseover', nav_logo_animation())
     work1.addEventListener('click', ()=>{
-        work1.style.width = '100vw'
-        work1.style.height = '100vh'
-        work1.style.top = '0'
-        work1.style.left = '0'
+        lscroll.stop()
+        work1.style.width = '200vw'
+        work1.style.height = '350vh'
+        work1.style.top = '-100vh'
+        work1.style.left = '-50vw'
         work1.style.backgroundColor = 'white'
         work1.style.boxShadow = '30vw 10vw 10vw 10vw white'
-        document.querySelector('.work1 .elements').style.display = 'none'
+        document.querySelectorAll('.work1 .elements').forEach(element => {
+            element.style.display = 'none'
+        })
         work1_page.style.display = 'block'
-        lscroll.stop()
         window.setTimeout(()=>{
             work1_page.style.opacity = 1
         }, 200)
@@ -285,11 +289,15 @@
         work1.style.left = '38.2vw'
         work1.style.backgroundColor = '#bef992'
         work1.style.boxShadow = 'none'
-        document.querySelector('.work1 .elements').style.display = 'block'
+        document.querySelectorAll('.work1 .elements').forEach(element => {
+            element.style.display = 'block'
+        })
         lscroll.start()
         window.setTimeout(()=>{
             work1_page.style.display = 'none'
         }, 200)
     })
+
+    
 
     

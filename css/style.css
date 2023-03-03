@@ -49,7 +49,7 @@ html.has-scroll-dragging {
   height: 100%; }
 
 .c-scrollbar {
-  z-index: 999;
+  z-index: 29;
   position: absolute;
   right: 0;
   top: 0;
@@ -929,7 +929,7 @@ body {
   height: 19.2vw;
   left: 38.2vw;
   cursor: pointer;
-  transition: all 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .work1 .container-title {
@@ -959,7 +959,7 @@ body {
 }
 
 .work1:hover {
-  background-color: white;
+  background-color: white !important;
 }
 
 .work1:hover > .arrow {
@@ -983,7 +983,6 @@ body {
   top: 0;
   opacity: 0;
   display: none;
-  /* pointer-events: none; */
   transition: all 0.5s linear;
   margin: 0;
   padding: 0;
@@ -992,7 +991,7 @@ body {
 .close-button-container {
   position: absolute;
   top: 2vw;
-  left: 2vw;
+  right: 2vw;
   cursor: pointer;
   height: 3vw;
   width: 3vw;
@@ -1004,7 +1003,7 @@ body {
   width: 3em;
   height: 0.3em;
   background-color: #2b1f31;
-  transform: rotate(225deg);
+  transform: rotate(315deg);
   transition: all 0.5s ease-in-out;
 }
 
@@ -1034,15 +1033,15 @@ body {
 
 .close-button-container:hover>.close-button::before {
   transform: rotate(-45deg);
-  top: -0.8vw;
-  left: -0.25vw;
+  top: -0.77vw;
+  left: -0.22vw;
   width: 2.2em;
 }
 
 .close-button-container:hover>.close-button::after {
   transform: rotate(45deg);
-  top: 0.8vw;
-  left: -0.25vw;
+  top: 0.77vw;
+  left: -0.22vw;
   width: 2.2em;
 }
 
