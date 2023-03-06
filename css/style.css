@@ -97,7 +97,7 @@ html.has-scroll-dragging {
   opacity: 1;
   width: 12px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 7px;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -552,6 +552,8 @@ body {
 .cloud {
   position: absolute;
   z-index: 2;
+  image-rendering: optimizeSpeed !important;
+  transform: translate(0, 0, 1px) !important;
 }
 
 .c3 {
@@ -800,6 +802,10 @@ body {
   z-index: 6;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 
 .about-rocks-container {
@@ -823,8 +829,21 @@ body {
   flex-direction: column;
 }
 
+.invis-call {
+  position: absolute;
+  bottom: 90vh;
+  width: 10vw;
+}
+
+.invis-call-reverse {
+  position: absolute;
+  bottom: 120vh;
+  width: 10vw;
+}
+
 .about-rocks .rock-top {
   position: relative;
+  top: 1px;
   width: 100vw;
   height: 250vh;
 }
@@ -884,9 +903,10 @@ body {
 
 
 #works-container {
+  top: -1px;
   position: relative;
   width: 100vw;
-  height: 350vh;
+  height: 300vh;
   background-color: #413d65;
 }
 
@@ -903,6 +923,24 @@ body {
   top: 0vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+#works-container .water-bottom {
+  width: 100vw;
+  height: 70vh;
+  position: absolute;
+  bottom: -50vh;
+  background-color: #5fb9b0;
+  z-index: 2;
+}
+
+#works-container .water-bottom2 {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  bottom: 0vh;
+  background-color: #5fb9b0;
+  z-index: 2;
 }
 
 #works-container .rock-top-container {
@@ -931,6 +969,18 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
+}
+
+#works-container .rock-back-container {
+  width: 100vw;
+  position: relative;
+  bottom: -50vh;
+}
+
+#works-container .rock-back-container .rock-back {
+  color:#2b1f31;
+  width: 100vw;
+  position: absolute;
 }
 
 .tv-rock-container .tv-rock {
@@ -1006,7 +1056,6 @@ body {
   position: fixed;
   background-color: white;
   width: 100vw;
-  /* height: 100vh; */
   z-index: 30;
   top: 0;
   opacity: 0;
@@ -1014,15 +1063,37 @@ body {
   transition: all 0.5s linear;
   margin: 0;
   padding: 0;
-  grid-template-columns: 30vw 59vw 5vw;
-  column-gap: 3vw;
+  grid-template-columns: 30vw 55vw 10vw;
+  column-gap: 4vw;
+}
+
+.project-page .section {
+  padding-top: 5vw;
+}
+
+.project-page .section .heading {
+  font-weight: 600;
+  padding: 0.1em 0.3em;
+  width: 5.5em;
+  font-size: 2rem;
+  background-color: #2b1f31;
+  color: #bef992;
+  margin: 0;
+}
+
+.project-page .section .text {
+  font-size: 1.2rem;
+  padding-top: 1em;
+  font-weight: 600;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .work2-page {
   position: fixed;
   background-color: white;
   width: 100vw;
-  /* height: 100vh; */
   z-index: 30;
   top: 0;
   opacity: 0;
@@ -1038,19 +1109,12 @@ body {
   font-weight: 600;
   padding-left: 2.5vw;
   padding-top: 1.5vw;
-  font-size: 4.6rem;
+  font-size: 4.5rem;
   margin: 0;
-}
-
-.placeholder {
-  width: 100vw;
-  height: 80vh;
-  /* border: 4px solid black; */
 }
 
 .project-content {
   height: 100vh;
-  /* border: 1px solid black; */
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -1111,6 +1175,53 @@ body {
   left: -0.22vw;
   width: 2.2em;
 }
+
+.rocks {
+  image-rendering: optimizeSpeed !important;
+  transform: translate(0, 0, 1px) !important;
+}
+
+.work-water-rocks-container {
+  top: -2px;
+  width: 100vw;
+  position: relative;
+  z-index: 30;
+  height: 100vh;
+  background-color: #5fb9b0;
+  display: flex;
+  justify-content: center;
+}
+
+.work-water-rocks-container .rock-front {
+  color: #2b1f31;
+  width: 100vw;
+}
+
+.svg-container {
+  z-index: 3;
+}
+
+.work-water-rocks-container .hero-text {
+  position: absolute;
+  font-weight: 600;
+  font-size: 10.5vw;
+  color: #bef992;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 20vh;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.waves {
+  position: absolute;
+  height: 7vh;
+  top: -3.5vh;
+}
+
 
 
 

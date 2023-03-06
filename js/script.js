@@ -27,6 +27,7 @@
         }
     });
 
+//initial fall animation
     function fallin_animation() {
         let fallin_anime = anime.timeline({
             easing: 'easeOutSine',
@@ -41,6 +42,7 @@
         }, '+=2000');
     }
 
+//tv horizontal animation
     function tv_animation() {
         let tv_anime = anime.timeline({
             easing: 'linear',
@@ -56,16 +58,23 @@
         }, '+=1000');
     }
 
+//nav link clicking 
     function navclick(flag) {
         if(flag==1) lscroll.scrollTo('#home-container', 0)
         if(flag==2) lscroll.scrollTo('#about-container', 0)
         if(flag==3) lscroll.scrollTo('#works-container', 0)
     }
 
+
     lscroll.on('call', (flag)=>{
         if(flag==='tv') {
             tv_animation()
-            
+        }
+        else if(flag==='switch_reverse') {
+            me.src = '/assets/fallin.png'
+        }
+        else if(flag==='switch') {
+            me.src = '/assets/fallin_dark.png'
         }
         else if(flag==='highlight') {
             var i=2
@@ -269,6 +278,7 @@
 // nav logo animation
     logo.addEventListener('mouseover', nav_logo_animation())
 
+//clicking on mini page    
     work_mini_list.forEach(element => {
         element.addEventListener('click', ()=>{
             let work_mini = element
@@ -298,6 +308,7 @@
             })
     })
 
+//exiting project page
     close_button_list.forEach(element => {
         element.addEventListener('click', ()=>{
             let close_button = element
@@ -318,7 +329,7 @@
             lscroll.start()
             window.setTimeout(()=>{
                 page.style.display = 'none'
-            }, 200)
+            }, 400)
         })
     })
 
