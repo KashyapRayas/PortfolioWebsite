@@ -3,11 +3,13 @@
     const body = document.querySelector('body')
     const logo = document.querySelector('.logo')
     const me = document.querySelector('.fallin')
+    const me_container = document.querySelector('.fallin-container')
     const works_container = document.querySelector('#works-container')
     const tvs = document.querySelector('.moving-tvs')
     const highlight_text = document.querySelectorAll('.highlight')
     const close_button_list = document.querySelectorAll('.close-button-container')
     const work_mini_list = document.querySelectorAll('.work_mini')
+
     var wheight = 0
     var wwidth = 0
     var wtop = 0
@@ -20,10 +22,11 @@
         smooth: true,
         lerp: 0.02,
         direction: 'vertical',
+        reloadOnContextChange: true,
         scrollFromAnywhere: true,
         smoothMobile: true,
         smartphone: {
-            lerp: 0.01
+            lerp: 0.02
         }
     });
 
@@ -34,10 +37,10 @@
             autoplay: true
         })
         fallin_anime.add({
-            targets: '.fallin-container .fallin',
+            targets: '.fallin-container',
             keyframes: [
-                {translateY: -me.offsetHeight, duration: 0},
-                {translateY: (window.innerHeight)/2, duration: 4000}
+                {translateY: -(window.innerHeight)/1.5, duration: 0},
+                {translateY: 0, duration: 4000}
             ]
         }, '+=2000');
     }
@@ -61,8 +64,9 @@
 //nav link clicking 
     function navclick(flag) {
         if(flag==1) lscroll.scrollTo('#home-container', 0)
-        if(flag==2) lscroll.scrollTo('#about-container', 0)
-        if(flag==3) lscroll.scrollTo('#works-container', 0)
+        if(flag==2) lscroll.scrollTo('#about-container', -50)
+        if(flag==3) lscroll.scrollTo('#works-container', -50)
+        if(flag==4) lscroll.scrollTo('#contact-container', -50)
     }
 
 
@@ -77,12 +81,34 @@
             me.src = '/assets/fallin_dark.png'
         }
         else if(flag==='highlight') {
-            var i=2
+            var i=1
             highlight_text.forEach(element => {
                 element.style.animation = `2s highlight ${i+=0.5}s 1 normal forwards`
             });
         }
     })
+
+    function reveal_child(elem, i) {
+        let reveal_anime = anime.timeline({
+            easing: 'easeOutSine',
+            autoplay: true,
+        })
+        reveal_anime.add({
+            targets: elem,
+            keyframes: [
+                {duration: 0, opacity: '0'},
+                {duration: 700, opacity: '1'}
+            ]
+        }, `+=${800+i}`);
+    }
+
+    function reveal_animation(page) {
+        elem = document.querySelectorAll('.'+page+'-page .reveal')
+        var i=100
+        elem.forEach(elem => {
+            reveal_child(elem, i+=100)
+        })
+    }
 
     function nav_logo_animation() {
         let logo_anime = anime.timeline({
@@ -289,6 +315,7 @@
             wleft = work_mini.style.left
             let work_mini_name = work_mini.className.substring(0, 5)
             let project_page = document.getElementById(work_mini_name)
+            reveal_animation(work_mini_name)
             lscroll.stop()
             window.setTimeout(()=>{
                 work_mini.style.width = '200vw'
@@ -311,6 +338,7 @@
 //exiting project page
     close_button_list.forEach(element => {
         element.addEventListener('click', ()=>{
+
             let close_button = element
             let page = close_button.parentNode
             let project_name = close_button.parentNode.id

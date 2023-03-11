@@ -68,7 +68,7 @@
         <div class="navbar-bottom">
             <a id="home" onclick='navclick(1)' class="home" href="#">Home</a>
             <a id="about" onclick='navclick(2)' class="about" href="#">About me</a>
-            <a id="contact" class="contact" href="#">Contact</a>
+            <a id="contact" onclick='navclick(4)' class="contact" href="#">Contact</a>
             <a id="works" onclick='navclick(3)' class="work" href="#">Works</a>
         </div>
     </div>
@@ -88,13 +88,15 @@
 
             <div data-scroll-section id="home-container" class="page">
                 <img src="assets/nav-rock.png" class="nav-rock rock" alt="">
-                <img data-scroll data-scroll-speed="15" fetchpriority="high" src="/assets/rock-front.png" alt="" class="rock-front rock">
-                <div data-scroll data-scroll-speed="7" class="hero-rock-container">
-                    <img src="/assets/hero-rock.png" alt="" class="hero-rock rock">
+                <div data-scroll data-scroll-speed="15" class="rock-front-container">
+                    <img  src="/assets/rock-front.png" alt="" class="rock-front rock">
+                </div>
+                <div data-scroll-id="hero_rock" data-scroll data-scroll-speed="4" class="hero-rock-container">
+                    <img  src="/assets/hero-rock.png" alt="" class="hero-rock rock">
                 </div>
                 <img src="/assets/rock-back.png" alt="" class="rock-back rock">
                 <div data-scroll data-scroll-speed="2" class="background-rectangle"></div>
-                <p data-scroll data-scroll-speed="5" class="hero-text"><span>CREATIVE</span><br>DESIGNER</p>
+                <p data-scroll data-scroll-speed="3" class="hero-text"><span>CREATIVE</span><br>DESIGNER</p>
                 <img src="/assets/cloud1.png" alt="" class="cloud c1">
                 <img src="/assets/cloud3.png" alt="" class="cloud c3">
                 <img src="/assets/cloud6.png" alt="" class="cloud c6">
@@ -108,15 +110,15 @@
                 <div data-scroll data-scroll-speed="2" class="background-rectangle-1"></div>
                 <div data-scroll data-scroll-speed="4" class="background-rectangle-2"></div>
                 <p data-scroll data-scroll-speed="5" class="hero-text"><span>ABOUT </span>ME</p>
-                <p data-scroll data-scroll-speed="9" data-scroll-call="highlight" class="text1">21<br>YEARS<br>OLD WITH<br>A <span class="highlight">PASSION</span><br>FOR GRAPHIC<br>DESIGN & <span class="highlight">CREATIVE</span><br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY PURSUING<br>A DEGREE IN<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
-                <img data-scroll data-scroll-speed="2" src="/assets/about-rock-back.png" class="rock-back">
-                <img data-scroll data-scroll-speed="7" fetchpriority="high" src="/assets/face2.png" class="about-face">
+                <p data-scroll data-scroll-speed="9" data-scroll-call="highlight" class="text1">21<br>YEARS<br>OLD WITH<br>A <span class="highlight">PASSION</span><br>FOR GRAPHIC<br>DESIGN & <span class="highlight">CREATIVE</span><br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY STUDYING<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
+                <img data-scroll data-scroll-speed="2" src="/assets/about-rock-back.png" class="rock-back rock">
+                <img data-scroll data-scroll-speed="7"  src="/assets/face2.png" class="about-face">
                 <div class="bottom-cover"></div>
             </div>
 
             <div data-scroll-section id="works-container" class="page">
                 <p data-scroll data-scroll-speed="5" class="hero-text">WORKS</p>
-                <div data-scroll data-scroll-speed="7" fetchpriority="high" class="rock-top-container">
+                <div data-scroll data-scroll-speed="7"  class="rock-top-container">
                     <img src="/assets/rock-top.png" class="rock-top rock">
                 </div>
                 <div data-scroll data-scroll-speed="9" class="tv-rock-container">
@@ -128,18 +130,18 @@
                         <h3 class="container-title elements">Personal Brand<br>And Website</h3>
                         <img src="/assets/arrow.png" class="arrow elements" alt="">
                     </div>
-                    <img src="/assets/tv-rocks.png" fetchpriority="high" class="tv-rock rock">
+                    <img src="/assets/tv-rocks.png"  class="tv-rock rock">
                 </div>
                 <div data-scroll data-scroll-speed="7" class="water-bottom"></div>
                 <div class="water-bottom2"></div>
                 <div class="rock-back-container">
-                    <svg class="rock-back" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1920" height="2343.8" viewBox="0 0 7680 9375.2">
-                        <path class="cls-1" d="M-134,36058l473,3031,432,545,102,1321,243,447,515,1117,772,345.7,3166-304.8,994-324.7,264-772.2,670-671,710-934v4313.2l-1623-3.2-2933,6.9-2696-3.2-1658-5.7,183-7580Z" transform="translate(0 -36058)"/>
+                    <svg class="rock-back" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1920" height="2504.4" viewBox="0 0 7680 10017.6">
+                        <path class="cls-1" d="M-134,36058l473,3031,432,545,102,1321,243,447,515,1117,772,345.7,3166-304.8,994-324.7,264-772.2,670-671,710-934v6213.9l-1623-3.2-2933,6.9-2696-3.2-1658-5.6L-520,36586Z" transform="translate(0 -36058)"/>
                     </svg>
                 </div>
             </div>
 
-            <div data-scroll-section class="work-water-rocks-container">
+            <div data-scroll-section class="work-water-rocks-container" id="contact-container">
                 <div data-scroll data-scroll-speed="7" class="svg-container">
                     <svg class="rock-front" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1920" height="781.825" viewBox="0 0 7680 3127.3">
                         <path class="cls-1" d="M-6,45669l2562,452,292,233,2330-58,2519.44-539v3383H-6.186Z" transform="translate(0 -45669)"/>
@@ -147,16 +149,17 @@
                 </div>
                 <h3 data-scroll data-scroll-speed="5" data-scroll-call="ripple" data-scroll-repeat class="hero-text">CONTACT</h3>
                 <img src="/assets/waves.png" class="waves" alt="">
+                <div class="water"></div>
             </div>
 
             <div data-scroll-section class="about-rocks-container">
                 <div data-scroll data-scroll-repeat data-scroll-call="tv" data-scroll-speed="12" class="about-rocks">
                     <div class="rock-top">
-                        <img src="/assets/about-rock-front.png" fetchpriority="high" class="rock-front rock">
-                        <img src="/assets/about-rock-falls.png" fetchpriority="high" class="rock-falls rock">
+                        <img src="/assets/about-rock-front.png"  class="rock-front rock">
+                        <img src="/assets/about-rock-falls.png"  class="rock-falls rock">
                     </div>
                     <div class="rock-bottom">
-                        <img src="/assets/underground-cave2.png" fetchpriority="high" class="underground-cave rock" alt="">
+                        <img src="/assets/underground-cave2.png"  class="underground-cave rock" alt="">
                         <div class="track-tv">
                             <img src="/assets/movingtv.png" class="moving-tvs" alt="">
                             <img src="/assets/tracks.png" class="tracks rock" alt="">
@@ -173,15 +176,74 @@
         </div>
 
         <div class="work1-page project-page" id="work1">
-            <h1 class="project-title">PERSONAL<br>BRAND<br>AND<br>WEBSITE</h1>
+            <div class="left-section">
+                <h1 class="project-title reveal">PERSONAL<br>BRAND<br>AND<br>WEBSITE</h1>
+                <div class="project-title-section">
+                    <h3 class="project-title-heading reveal">
+                        THE TOOLS
+                    </h3>
+                    <h3 class="project-title-text reveal">
+                        STATIC DESIGN
+                        <br>✦ ADOBE PHOTOSHOP
+                        <br>
+                        <br>WEB DESIGN
+                        <br>✦ FIGMA
+                        <br>✦ HTML
+                        <br>✦ CSS
+                        <br>✦ VANILLA JS
+                    </h3>
+                </div>
+            </div>
             <div class="project-content">
                 <div class="section">
-                    <h3 class="heading">
+                    <h3 class="heading reveal">
                         THE BRIEF
                     </h3>
-                    <h3 class="text">
-                        MINIMALISTIC, SYMMETRIC, FLEXIBLE AND CREATIVE. THESE WERE THE IDEAS THAT I WANTED THE LOGO TO DESCRIBE TO THE VIEWER.
-                        <br><br>THE LOGO HAD TO ALSO BE FLEXIBLE FOR SMALLER AND BIGGER VIEW SIZES DUE TO MY EVER CHANGING OBSESSIONS WITH EITHER SMALL OR BIG DESIGN ELEMENTS.
+                    <h3 class="text reveal">
+                        I WANTED TO DESIGN A LOGO THAT DESCRIBED MAINLY 3 IDEAS THAT I LIVE BY WHILE CREATING ART:
+                        <br>✦ CREATIVITY
+                        <br>✦ SIMPLICITY
+                        <br>✦ FLEXIBILITY
+                    <br><br>GREEN IS MY FAVOURITE COLOR, SO I HAD TO DESIGN A COLOR PALETTE THAT FOCUSED ON GREEN. 
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE DESIGN
+                    </h3>
+                    <div class="images">
+                        <img src="/assets/linework.png" class="reveal" alt="">
+                        <img src="/assets/showcase.png" class="reveal" alt="">
+                    </div>
+                    <h3 class="text reveal">
+                        THE LOGO INCLUDES 3 KEY IDEAS:
+                        <br>✦ THE INITIALS OF MY NAME KASHYAP RAYAS
+                        <br>✦ THE K AND R BEING SYMMETRIC BY FLIPPING K VERTICALLY TO PRODUCE R
+                        <br>✦ A COLOR PALETTE WITH GREEN AS THE HERO
+                        <br>
+                        <br>COLOR PALETTE
+                        <br>✦ HERO GREEN: #bef992
+                        <br>✦ SIDEKICK GREEN: #5fb9b0
+                        <br>✦ SIDEKICK VIOLET: #413d65
+                        <br>✦ ANTI-HERO VIOLET: #2b1f31
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE ELEMENTS
+                    </h3>
+                    <div class="images v2">
+                        <img src="/assets/g1.png" class="reveal" alt="">
+                        <img src="/assets/g2.png" class="reveal" alt="">
+                        <img src="/assets/g3.png" class="reveal" alt="">
+                        <img src="/assets/g4.png" class="reveal" alt="">
+                        <img src="/assets/g5.png" class="reveal" alt="">
+                        <img src="/assets/g6.png" class="reveal" alt="">
+                    </div>
+                    <h3 class="text reveal">
+                        I DESIGNED THE WEBSITE PROTOTYPE USING FIGMA AND PHOTOSHOP. LATER CODED THE WEBSITE USING HTML, CSS AND JAVASCRIPT. 6000 LINES OF CODE LATER, HERE IT IS!
+                        <br>
+                        <br>THE WEBSITE IS A MEDIUM TO SHOWCASE THE CULMINATION OF MY WORK SO FAR, MY KNOWLEDGE GAINED AND MY LOVE FOR GRAPHIC DESIGN.
                     </h3>
                 </div>
             </div>

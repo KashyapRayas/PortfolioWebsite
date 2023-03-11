@@ -22,12 +22,16 @@ dark purple - 2b1f31
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2b1f31;
+  background-color: #413d65;
   transition: all 1s linear;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #413d65;
+}
+
+img {
+  pointer-events: none;
 }
 
 
@@ -432,12 +436,12 @@ body {
 }
 
 #home-container .hero-rock-container {
-  width: auto;
+  width: 55vw;
   height: auto;
   z-index: 8;
   position: absolute;
   right: 0px;
-  top: -10px;
+  top: 120px;
 }
 
 #home-container .hero-rock {
@@ -446,6 +450,7 @@ body {
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
+
 }
 
 #home-container .hero-text {
@@ -463,6 +468,7 @@ body {
   top: 120px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+
 }
 
 #home-container .background-rectangle {
@@ -475,6 +481,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
+
 }
 
 @keyframes rockmove {
@@ -508,12 +515,20 @@ body {
   letter-spacing: 0.01em;
 }
 
-#home-container .rock-front {
-  position: absolute;
-  z-index: 10;
-  left: 0px;
+#home-container .rock-front-container {
   width: 48vw;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
   top: 250px;
+}
+
+#home-container .rock-front {
+  width: 48vw;
+  animation-name: rockmove1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 }
 
 #home-container .nav-rock {
@@ -601,26 +616,31 @@ body {
 }
 
 .clouds-container {
-  top: 0;
-  height: 225vh;
+  top: 225vh;
+  height: max-content;
   width: 100vw;
   position: absolute;
   z-index: 15;
   padding: 0;
   margin: 0;
   pointer-events: none;
+  
 }
 
 .ctr {
   width: 85vw;
   bottom: 40px;
   right: -50px;
+  transform: translate3d(0, 0, 1px);
+  -webkit-transform: translate3d(0, 0, 1px);
 }
 
 .ctl {
   width: 65vw;
   bottom: 0px;
   left: 0px;
+  transform: translate3d(0, 0, 1px);
+  -webkit-transform: translate3d(0, 0, 1px);
 }
 
 .ctrb {
@@ -635,13 +655,13 @@ body {
 
 @keyframes fall {
   0% {
-    top: 0px;
+    transform: translateY(0px);
   }
   50% {
-    top: -20px
+    transform: translateY(-20px);
   }
   100% {
-    top: 0px;
+    transform: translateY(0px);
   }
 }
 
@@ -652,14 +672,14 @@ body {
   z-index: 12;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   pointer-events: none;
 }
 
 .fallin {
   position: absolute;
   width: 4.5vw;
+  top: 47vh;
+  left: 47vw;
   animation-name: fall;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
@@ -685,6 +705,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
+
 }
 
 #about-container .c2 {
@@ -717,6 +738,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
+
 }
 
 #about-container .hero-text {
@@ -808,14 +830,21 @@ body {
   perspective: 1000;
 }
 
+@keyframes blank {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
 .about-rocks-container {
   top: 245vh;
   height: 300vh;
   width: 100vw;
   position: absolute;
   z-index: 15;
-  padding: 0;
-  margin: 0;
   overflow: hidden;
 }
 
@@ -855,6 +884,7 @@ body {
   bottom: 0;
   width: 75vw;
   image-rendering: optimizeSpeed;
+  animation: blank 10s linear 0s infinite;
 }
 
 .rock-top .rock-falls {
@@ -864,12 +894,15 @@ body {
   left: 0;
   bottom: 0;
   image-rendering: optimizeSpeed;
+  animation: blank 10s linear 0s infinite;
 }
 
 .rock-bottom {
   position: relative;
   width: 100vw;
   z-index: 2;
+  animation: blank 10s linear 0s infinite;
+
 }
 
 .rock-bottom .underground-cave {
@@ -877,6 +910,7 @@ body {
   top: 0;
   z-index: 3;
   width: 100vw;
+  animation: blank 10s linear 0s infinite;
 }
 
 .rock-bottom .track-tv {
@@ -884,6 +918,7 @@ body {
   width: 100vw;
   top: 0;
   z-index: 2;
+  
 }
 
 .track-tv .tracks {
@@ -891,6 +926,8 @@ body {
   width: 80vw;
   position: absolute;
   z-index: 1;
+  animation: blank 10s linear 0s infinite;
+
 }
 
 .track-tv .moving-tvs {
@@ -920,7 +957,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 0vh;
+  top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -986,6 +1023,7 @@ body {
 .tv-rock-container .tv-rock {
   width: 65vw;
   position: absolute;
+  animation: blank 10s linear 0s infinite;
 }
 
 .work_mini {
@@ -994,6 +1032,7 @@ body {
   position: absolute;
   cursor: pointer;
   transition: all 1s ease-in-out;
+  animation: blank 10s linear 0s infinite;
 }
 
 .work_mini .container-title {
@@ -1004,7 +1043,7 @@ body {
   padding-left: 1vw;
   margin: 0;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2vw;
   transition: all 0.5s ease-in-out;
   color: #2b1f31;
 }
@@ -1059,23 +1098,76 @@ body {
   z-index: 30;
   top: 0;
   opacity: 0;
+  /* opacity: 1; */
   display: none;
+  /* display: grid; */
   transition: all 0.5s linear;
   margin: 0;
   padding: 0;
-  grid-template-columns: 30vw 55vw 10vw;
+  grid-template-columns: 30vw 58vw 7vw;
   column-gap: 4vw;
+}
+
+.left-section {
+  padding-left: 2.5vw;
+  padding-top: 1.5vw;
+}
+
+.project-title-section {
+  padding-top: 2em;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 4.2rem;
+  margin: 0;
+  color: #2b1f31;
+}
+
+.project-content {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.project-title-section .project-title-heading {
+  font-weight: 600;
+  padding: 0.1em 0.3em;
+  /* width: 5.5em; */
+  width: max-content;
+  font-size: 2rem;
+  /* background-image: linear-gradient(to right, #2b1f31, #413d65); */
+  background-color: #2b1f31;
+  color: #bef992;
+  margin: 0;
+}
+
+.project-title-section .project-title-text {
+  font-size: 1.2rem;
+  padding-top: 1em;
+  font-weight: 600;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  color:#413d65;
 }
 
 .project-page .section {
   padding-top: 5vw;
+  padding-right: 2em;
+}
+
+.project-page .project-content .section:last-child {
+  padding-bottom: 5em;
 }
 
 .project-page .section .heading {
   font-weight: 600;
   padding: 0.1em 0.3em;
-  width: 5.5em;
+  /* width: 5.5em; */
+  width: max-content;
   font-size: 2rem;
+  /* background-image: linear-gradient(to right, #2b1f31, #413d65); */
   background-color: #2b1f31;
   color: #bef992;
   margin: 0;
@@ -1088,7 +1180,36 @@ body {
   margin: 0;
   text-align: justify;
   text-justify: inter-word;
+  color:#413d65;
 }
+
+.project-page .section .images {
+  width: 80%;
+  padding: 1.5em 0 0 0;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  column-gap: 1.5em;
+}
+
+.project-page .images img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.project-page .section .v2 {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+}
+
+.v2 img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+
 
 .work2-page {
   position: fixed;
@@ -1103,20 +1224,6 @@ body {
   padding: 0;
   grid-template-columns: 30vw 59vw 5vw;
   column-gap: 3vw;
-}
-
-.project-title {
-  font-weight: 600;
-  padding-left: 2.5vw;
-  padding-top: 1.5vw;
-  font-size: 4.5rem;
-  margin: 0;
-}
-
-.project-content {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .close-button-container {
@@ -1135,7 +1242,7 @@ body {
   height: 0.3em;
   background-color: #2b1f31;
   transform: rotate(315deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-button::before {
@@ -1147,7 +1254,7 @@ body {
   top: 0vw; /*-1vw */
   left: 0vw;
   transform: rotate(0deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-button::after {
@@ -1159,7 +1266,7 @@ body {
   top: 0vw;
   left: 0vw;
   transform: rotate(90deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-button-container:hover>.close-button::before {
@@ -1176,7 +1283,7 @@ body {
   width: 2.2em;
 }
 
-.rocks {
+.rock {
   image-rendering: optimizeSpeed !important;
   transform: translate(0, 0, 1px) !important;
 }
@@ -1187,9 +1294,20 @@ body {
   position: relative;
   z-index: 30;
   height: 100vh;
-  background-color: #5fb9b0;
+  background-color: #2b1f31;
   display: flex;
   justify-content: center;
+}
+
+#contact-container .water {
+  width: 100vw;
+  height: 60vh;
+  background-color: #5fb9b0;
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+  animation: blank 10s linear 0s infinite;
+
 }
 
 .work-water-rocks-container .rock-front {
@@ -1198,7 +1316,9 @@ body {
 }
 
 .svg-container {
-  z-index: 3;
+  z-index: 7;
+  animation: blank 10s linear 0s infinite;
+
 }
 
 .work-water-rocks-container .hero-text {
@@ -1206,23 +1326,22 @@ body {
   font-weight: 600;
   font-size: 10.5vw;
   color: #bef992;
-  z-index: 2;
+  z-index: 6;
   text-align: center;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: 20vh;
+  top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
 .waves {
+  z-index: 5;
   position: absolute;
   height: 7vh;
   top: -3.5vh;
 }
-
-
 
 
 
