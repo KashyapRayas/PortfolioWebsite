@@ -468,7 +468,7 @@ body {
   top: 120px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-
+  cursor: context-menu;
 }
 
 #home-container .background-rectangle {
@@ -754,6 +754,7 @@ body {
   top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  cursor: context-menu;
 }
 
 #about-container .hero-text span {
@@ -960,6 +961,7 @@ body {
   top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  cursor: context-menu;
 }
 
 #works-container .water-bottom {
@@ -1310,6 +1312,114 @@ body {
 
 }
 
+#contact-container .left-container {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 50%;
+  left: 0;
+}
+
+
+#contact-container .tv-1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40vw;
+}
+
+#contact-container .tv-2 {
+  position: absolute;
+  bottom: 6vw;
+  right: 0;
+  width: 30vw;
+}
+
+#contact-container .contact-name {
+  position: absolute;
+  bottom: 19vw;
+  right: 4vw;
+  z-index: 3;
+  transform: rotate(3deg);
+  font-size: 2.5vw;
+  color: #2b1f31;
+}
+
+#contact-container .contact-value {
+  position: absolute;
+  bottom: 7vw;
+  right: 5vw;
+  z-index: 3;
+  transform: rotate(-3deg);
+  font-size: 2.5vw;
+  color: #413d65;
+}
+
+#contact-container .right-container {
+  position: absolute;
+  bottom: 10vh;
+  z-index: 10;
+  width: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.right-container .contact-text {
+  color: #bef992;
+  font-size: 3.7rem;
+  text-align: right;
+  font-weight: 600;
+  z-index: 8;
+  width: max-content;
+  padding: 0;
+  padding-left: 1em;
+  /* border: 2px solid white; */
+  gap: 0;
+  margin: 0;
+}
+
+.right-container ul {
+  width: max-content;
+  padding-left: 10vw;
+  /* border: 2px solid white; */
+}
+
+.right-container ul li{
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 0 0 20px;
+  overflow: hidden;
+}
+.right-container ul li a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  background: #2b1f31;
+  font-size: 40px;
+  line-height: 60px;
+  transform: translateY(0);
+  transition: .9s;
+  margin-bottom: -1px;
+  color: #5fb9b0;
+}
+.right-container ul li:hover a{
+  transform: translateY(-100%);
+}
+.right-container ul li:hover a{
+  /* background: #413d65; */
+  color:#bef992
+}
+
+
 .work-water-rocks-container .rock-front {
   color: #2b1f31;
   width: 100vw;
@@ -1334,6 +1444,7 @@ body {
   top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  cursor: context-menu;
 }
 
 .waves {

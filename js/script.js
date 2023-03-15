@@ -69,6 +69,78 @@
         if(flag==4) lscroll.scrollTo('#contact-container', -50)
     }
 
+    function contact_display(flag) {
+        if(flag==1) {
+            document.querySelector('.contact-name').textContent = 'GMAIL'
+            document.querySelector('.contact-value').textContent = 'KASHYAP.RAYAS'
+            var b = baffle(document.querySelector('.contact-name'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            b.start()
+            b.reveal(5500)
+            var c = baffle(document.querySelector('.contact-value'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            c.start()
+            c.reveal(4500)
+        }
+        if(flag==2) {
+            document.querySelector('.contact-name').textContent = 'INSTAGRAM'
+            document.querySelector('.contact-value').textContent = 'KASHYAP.PNG'
+            var b = baffle(document.querySelector('.contact-name'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            b.start()
+            b.reveal(5500)
+            var c = baffle(document.querySelector('.contact-value'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            c.start()
+            c.reveal(4500)
+        }
+        if(flag==3) {
+            document.querySelector('.contact-name').textContent = 'DISCORD'
+            document.querySelector('.contact-value').textContent = 'kkstar#5674'
+            var b = baffle(document.querySelector('.contact-name'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            b.start()
+            b.reveal(5500)
+            var c = baffle(document.querySelector('.contact-value'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            c.start()
+            c.reveal(4500)
+        }
+        if(flag==4) {
+            document.querySelector('.contact-name').textContent = 'LINKEDIN'
+            document.querySelector('.contact-value').textContent = 'KASHYAPGRAYAS'
+            var b = baffle(document.querySelector('.contact-name'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            b.start()
+            b.reveal(5500)
+            var c = baffle(document.querySelector('.contact-value'), {
+                // characters: 'abcdefghijklmnopqrstuvwxyz',
+                speed: 75
+            })
+            c.start()
+            c.reveal(4500)
+        }
+    }
+
+    function contact_refresh() {
+            document.querySelector('.contact-name').textContent = ''
+            document.querySelector('.contact-value').textContent = ''
+    }
+
 
     lscroll.on('call', (flag)=>{
         if(flag==='tv') {
@@ -285,6 +357,29 @@
         }, '+=1500');
     }
 
+    function hero_text() {
+        d = baffle(document.querySelector('#home-container .hero-text span'), {
+            characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
+            // characters: '▖▗▘▚▝▞',
+            // characters: '▥▤▧▨',
+            // characters: 'abcdefghijklmnopqrstuvwxyz',
+            speed: 90
+        })
+        d.text(currentText => currentText='GRAPHIC')
+        d.start()
+        d.reveal(3000, 1000)
+        window.setTimeout(()=>{
+            d.text(currentText => currentText='WEB')
+            d.start()
+            d.reveal(2000, 1000)
+        }, 2500)
+        window.setTimeout(()=>{
+            d.text(currentText => currentText='CREATIVE')
+            d.start()
+            d.reveal(2000, 1000)
+        }, 4500)
+    }
+
     loader_text_animation()
     window.setTimeout(function() {
         window.addEventListener('load', loader_logo_animation())
@@ -292,6 +387,7 @@
     function preloader() {
         loader_exit_animation()
         fallin_animation()
+        hero_text()
     }
 
     imagesLoaded( body, function( instance ) {
