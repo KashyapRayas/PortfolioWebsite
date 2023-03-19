@@ -15,6 +15,9 @@
     var wtop = 0
     var wleft = 0
 
+// oriantation change
+    window.onorientationchange = function() {  	window.location.reload(); };
+
 // scroll
 
     const lscroll = new LocomotiveScroll({
@@ -75,12 +78,14 @@
             document.querySelector('.contact-value').textContent = 'KASHYAP.RAYAS'
             var b = baffle(document.querySelector('.contact-name'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             b.start()
             b.reveal(5500)
             var c = baffle(document.querySelector('.contact-value'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             c.start()
@@ -91,12 +96,14 @@
             document.querySelector('.contact-value').textContent = 'KASHYAP.PNG'
             var b = baffle(document.querySelector('.contact-name'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             b.start()
             b.reveal(5500)
             var c = baffle(document.querySelector('.contact-value'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             c.start()
@@ -107,12 +114,14 @@
             document.querySelector('.contact-value').textContent = 'kkstar#5674'
             var b = baffle(document.querySelector('.contact-name'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             b.start()
             b.reveal(5500)
             var c = baffle(document.querySelector('.contact-value'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             c.start()
@@ -123,22 +132,19 @@
             document.querySelector('.contact-value').textContent = 'KASHYAPGRAYAS'
             var b = baffle(document.querySelector('.contact-name'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             b.start()
             b.reveal(5500)
             var c = baffle(document.querySelector('.contact-value'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
+                characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
                 speed: 75
             })
             c.start()
             c.reveal(4500)
         }
-    }
-
-    function contact_refresh() {
-            document.querySelector('.contact-name').textContent = ''
-            document.querySelector('.contact-value').textContent = ''
     }
 
 
@@ -360,9 +366,6 @@
     function hero_text() {
         d = baffle(document.querySelector('#home-container .hero-text span'), {
             characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
-            // characters: '▖▗▘▚▝▞',
-            // characters: '▥▤▧▨',
-            // characters: 'abcdefghijklmnopqrstuvwxyz',
             speed: 90
         })
         d.text(currentText => currentText='GRAPHIC')

@@ -10,7 +10,11 @@
 </head>
 <body>
 
-    <div id="loading">
+    <div class="portrait">
+        <h1>Switch to Landscape for a better experience</h1>
+    </div>
+
+    <div id="loading" class="landscape" >
         <div class="page1">
             <p class="p1" align="center">Design Portfolio<br>&copy 2023</p>
             <div class="loading-contents">
@@ -47,7 +51,7 @@
         <div class="page3"></div>
     </div>
 
-    <div class="navbar-container">
+    <div class="navbar-container landscape">
         <div class="navbar-top">
                 <div class="logo-container">
                     <div class="logo">
@@ -74,7 +78,7 @@
         </div>
     </div>
 
-    <main>
+    <main class="landscape">
 
         <div id="js-scroll">
 
@@ -127,10 +131,10 @@
                         <h3 class="container-title elements">Personal Brand<br>And Website</h3>
                         <img src="/assets/arrow.png" class="arrow elements" alt="">
                     </div>
-                    <div class="work2 work_mini">
+                    <!-- <div class="work2 work_mini">
                         <h3 class="container-title elements">Personal Brand<br>And Website</h3>
                         <img src="/assets/arrow.png" class="arrow elements" alt="">
-                    </div>
+                    </div> -->
                     <img src="/assets/tv-rocks.png"  class="tv-rock rock">
                 </div>
                 <div data-scroll data-scroll-speed="7" class="water-bottom"></div>
@@ -144,7 +148,7 @@
 
             <div data-scroll-section class="work-water-rocks-container" id="contact-container">
                 <div data-scroll data-scroll-speed="7" class="svg-container">
-                    <svg class="rock-front" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1920" height="781.825" viewBox="0 0 7680 3127.3">
+                    <svg class="rock-front" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 7680 3127.3">
                         <path class="cls-1" d="M-6,45669l2562,452,292,233,2330-58,2519.44-539v3383H-6.186Z" transform="translate(0 -45669)"/>
                     </svg>
                 </div>
@@ -161,19 +165,19 @@
                     <p class="contact-text">FEEL FREE TO<br>CONTACT<br>ME ON</p>
                     <div class="media-icons">
                         <ul>
-                            <li onmouseenter="contact_display(1)" onmouseleave="contact_refresh()">
+                            <li onmouseenter="contact_display(1)">
                                 <a href="#"> <i class="fa fa-envelope" aria-hidden="true"></i> </a> 
                                 <a href="#"> <i class="fa fa-envelope" aria-hidden="true"></i> </a> 
                             </li>
-                            <li onmouseenter="contact_display(2)" onmouseleave="contact_refresh()">
+                            <li onmouseenter="contact_display(2)">
                                 <a href="#"> <i class="fa-brands fa-instagram" aria-hidden="true"></i> </a>
                                 <a href="#"> <i class="fa-brands fa-instagram" aria-hidden="true"></i> </a>                
                             </li>
-                            <li onmouseenter="contact_display(3)" onmouseleave="contact_refresh()">
+                            <li onmouseenter="contact_display(3)">
                                 <a href="#"> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
                                 <a href="#"> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
                             </li>
-                            <li onmouseenter="contact_display(4)" onmouseleave="contact_refresh()">
+                            <li onmouseenter="contact_display(4)">
                                 <a href="#"> <i class="fa-brands fa-linkedin" aria-hidden="true"></i> </a>
                                 <a href="#"> <i class="fa-brands fa-linkedin" aria-hidden="true"></i> </a>
                              </li>
@@ -278,8 +282,10 @@
                 </div>
             </div>
             <div class="close-button-container">
-                <div class="close-button"></div>
-            </div>  
+                <div class="close-button1"></div>
+                <div class="close-button2"></div>
+                <div class="close-button3"></div>
+           </div>    
         </div>
 
         <div class="work2-page project-page" id="work2">
