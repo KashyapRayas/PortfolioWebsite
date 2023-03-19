@@ -153,10 +153,10 @@
             tv_animation()
         }
         else if(flag==='switch_reverse') {
-            me.src = '/assets/fallin.png'
+            me.src = 'assets/fallin.png'
         }
         else if(flag==='switch') {
-            me.src = '/assets/fallin_dark.png'
+            me.src = 'assets/fallin-dark.png'
         }
         else if(flag==='highlight') {
             var i=1
