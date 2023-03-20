@@ -627,16 +627,14 @@ main {
 }
 
 .clouds-container {
-  /* display: none; */
-  top: 225vh;
-  height: max-content;
+  top: 0;
+  height: 225vh;
   width: 100vw;
   position: absolute;
   z-index: 15;
   padding: 0;
   margin: 0;
   pointer-events: none;
-  /* overflow: hidden; */
   transform: translate3d(0, 0, 1px);
   -webkit-transform: translate3d(0, 0, 1px);
 }
