@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kashyap Rayas</title>
+    <link rel="preload" as="image" href="assets/underground-cave2.png">
+    <link rel="preload" as="image" href="assets/about-rock-falls.png">
+    <link rel="preload" as="image" href="assets/about-rock-front.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
 
@@ -91,7 +95,7 @@
                 <img src="assets/cloudright.png" alt="" class="cloud ctr">
             </div>
 
-            <div data-scroll-section id="home-container" class="page">
+            <div loading="eager" data-scroll-section id="home-container" class="page">
                 <img src="assets/nav-rock.png" class="nav-rock rock" alt="">
                 <div data-scroll data-scroll-speed="15" class="rock-front-container">
                     <img  src="assets/rock-front.png" alt="" class="rock-front rock">
@@ -100,7 +104,7 @@
                     <img  src="assets/hero-rock.png" alt="" class="hero-rock rock">
                 </div>
                 <img src="assets/rock-back.png" alt="" class="rock-back rock">
-                <div data-scroll data-scroll-speed="2" class="background-rectangle"></div>
+                <div loading="eager" data-scroll data-scroll-speed="2" class="background-rectangle"></div>
                 <p data-scroll data-scroll-speed="3" class="hero-text"><span>CREATIVE</span><br>DESIGNER</p>
                 <img src="assets/cloud1.png" alt="" class="cloud c1">
                 <img src="assets/cloud3.png" alt="" class="cloud c3">
@@ -113,12 +117,12 @@
                 <img loading="lazy" src="assets/cloud2.png" alt="" class="cloud c2">
                 <img loading="lazy" src="assets/cloud1.png" alt="" class="cloud c1">
                 <div data-scroll data-scroll-speed="2" class="background-rectangle-1"></div>
-                <div data-scroll data-scroll-speed="4" class="background-rectangle-2"></div>
+                <div loading="eager" data-scroll data-scroll-speed="4" class="background-rectangle-2"></div>
                 <p data-scroll data-scroll-speed="5" class="hero-text"><span>ABOUT </span>ME</p>
                 <p data-scroll data-scroll-speed="9" data-scroll-call="highlight" class="text1">21<br>YEARS<br>OLD WITH<br>A <span class="highlight">PASSION</span><br>FOR GRAPHIC<br>DESIGN & <span class="highlight">CREATIVE</span><br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY STUDYING<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
-                <img data-scroll data-scroll-speed="7"  src="assets/face2.png" class="about-face">
+                <img loading="eager" data-scroll data-scroll-speed="7"  src="assets/face2.png" class="about-face">
                 <!-- <img data-scroll data-scroll-speed="2" src="assets/about-rock-back.png" class="rock-back rock"> -->
-                <div class="bottom-cover"></div>
+                <div loading="eager" class="bottom-cover"></div>
             </div>
 
             <div data-scroll-section id="works-container" class="page">
@@ -174,8 +178,8 @@
                                 <a href="https://www.instagram.com/kashyap.rayas" target="_blank"> <i class="fa-brands fa-instagram" aria-hidden="true"></i> </a>                
                             </li>
                             <li onmouseenter="contact_display(3)">
-                                <a href=""> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
-                                <a href=""> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
+                                <a href="#"> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
+                                <a href="#"> <i class="fa-brands fa-discord" aria-hidden="true"></i> </a> 
                             </li>
                             <li onmouseenter="contact_display(4)">
                                 <a href="https://www.linkedin.com/in/kashyapgrayas" target="_blank"> <i class="fa-brands fa-linkedin" aria-hidden="true"></i> </a>
@@ -183,14 +187,15 @@
                              </li>
                         </ul>
                     </div>
+                    <p class="footer">&copy 2023 Kashyap Rayas, All Rights Reserved</p>
                 </div>
             </div>
 
             <div data-scroll-section class="about-rocks-container">
                 <div data-scroll data-scroll-repeat data-scroll-call="tv" data-scroll-speed="12" class="about-rocks">
                     <div class="rock-top">
-                        <img src="assets/about-rock-front.png"  class="rock-front rock">
-                        <img src="assets/about-rock-falls.png"  class="rock-falls rock">
+                        <img loading="eager" src="assets/about-rock-front.png"  class="rock-front rock">
+                        <img loading="eager" src="assets/about-rock-falls.png"  class="rock-falls rock">
                     </div>
                     <div class="rock-bottom">
                         <img src="assets/underground-cave2.png"  class="underground-cave rock" alt="">
@@ -246,8 +251,8 @@
                         THE DESIGN
                     </h3>
                     <div class="images">
-                        <img src="assets/linework.png" class="reveal" alt="">
-                        <img src="assets/showcase.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/linework.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/showcase.png" class="reveal" alt="">
                     </div>
                     <h3 class="text reveal">
                         THE LOGO INCLUDES 3 KEY IDEAS:
@@ -267,12 +272,12 @@
                         THE ELEMENTS
                     </h3>
                     <div class="images v2">
-                        <img src="assets/g1.png" class="reveal" alt="">
-                        <img src="assets/g2.png" class="reveal" alt="">
-                        <img src="assets/g3.png" class="reveal" alt="">
-                        <img src="assets/g4.png" class="reveal" alt="">
-                        <img src="assets/g5.png" class="reveal" alt="">
-                        <img src="assets/g6.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g1.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g2.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g3.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g4.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g5.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/g6.png" class="reveal" alt="">
                     </div>
                     <h3 class="text reveal">
                         I DESIGNED THE WEBSITE PROTOTYPE USING FIGMA AND PHOTOSHOP. LATER CODED THE WEBSITE USING HTML, CSS AND JAVASCRIPT. 3000 LINES OF CODE LATER, HERE IT IS!

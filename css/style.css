@@ -443,6 +443,7 @@ main {
   height: 225vh;
   top: 0;
   overflow: hidden;
+  
 }
 
 #home-container .hero-rock-container {
@@ -1405,9 +1406,9 @@ main {
   list-style: none;
   display: inline-block;
   text-align: center;
-  width: 60px;
-  height: 60px;
-  margin: 0 0 0 20px;
+  width: 4vw;
+  height: 4vw;
+  margin: 1vw 0 0 1.7vw;
   overflow: hidden;
 }
 .right-container ul li a{
@@ -1417,8 +1418,8 @@ main {
   position: relative;
   text-decoration: none;
   background: #2b1f31;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 3vw;
+  line-height: 3vw;
   transform: translateY(0);
   transition: .9s;
   margin-bottom: -1px;
@@ -1448,6 +1449,7 @@ main {
   width: 100vw;
 }
 
+
 .work-water-rocks-container .hero-text {
   position: absolute;
   font-weight: 600;
@@ -1461,6 +1463,14 @@ main {
   top: 10vh;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  cursor: context-menu;
+}
+
+.footer {
+  color:#bef992;
+  text-align: right;
+  font-size: 1.3vw;
+  transform: translateX(-19vw) translateY(10px);
   cursor: context-menu;
 }
 
