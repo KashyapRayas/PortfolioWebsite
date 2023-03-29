@@ -429,6 +429,8 @@
             project_page.style.display = 'grid'
             let project_page_content = document.querySelector('#'+work_mini_name+' .project-content')
             project_page_content.scrollTo(0, 0)
+            let project_left_section = document.querySelector('#'+work_mini_name+' .left-section')
+            project_left_section.scrollTo(0, 0)
             window.setTimeout(()=>{
                 project_page.style.opacity = 1
             }, 300)

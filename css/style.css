@@ -701,6 +701,24 @@ main {
   pointer-events: none;
 }
 
+/* .speech-bubble {
+  position: absolute;
+  width: 8vw;
+  height: max-content;
+  top: 52vh;
+  left: 52vw;
+  background-color: #413d65;
+  border-radius: 1vw;
+  display: flex;
+}
+
+.speech {
+  padding: 0.5vw;
+  font-size: 1rem;
+  color: #bef992;
+
+} */
+
 #about-container {
   position: relative;
   width: 100vw;
