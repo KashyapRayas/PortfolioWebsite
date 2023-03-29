@@ -1222,6 +1222,125 @@ main {
   width: 100%;
 }
 
+.project-page .section .s2 {
+  grid-template-columns: 0.65fr 1fr;
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+}
+
+.s2 img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.project-page .section .sub-text {
+  width: 80%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-page .section .sv2 {
+  grid-template-columns: 1fr 0.52fr;
+  grid-template-rows: auto;
+}
+
+.sv2 .right-images img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.sv2 .left-images img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.left-images {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.7em;
+}
+
+.right-images {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.home-image {
+  padding-top: 1.5em;
+  width: 80%;
+}
+
+.home-image img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.laptop-image {
+  width: 80%;
+}
+
+.laptop-image img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.sub-text a {
+  color: #bef992;
+  text-decoration: none;
+  background-color: #2b1f31;
+  padding: 0vw 0.2vw;
+  font-weight: 500;
+}
+
+.section .logo-container .logo .R {
+  position: absolute;
+  top: 0.83em;
+  left: 2.3em;
+}
+.section .logo-container .logo svg {
+  width: 2em;
+  padding: 0;
+  cursor: pointer;
+  color: #2b1f31;
+}
+.section .logo-container .ashyap-container {
+  position: absolute;
+  left: 2.15em;
+  width: 5.1em;
+  height: 1em;
+  top: 2.55em;
+  overflow: hidden;
+}
+
+.section .logo-container .ashyap-container .ashyap {
+  position: absolute;
+  top: -1.2em;
+  left: 4.5em;
+  color: #2b1f31;
+  font-weight: 500;
+}
+
+.section .logo-container .ayas-container {
+  width: 3.3em;
+  height: 1em;
+  position: absolute;
+  left: 2.2em;
+  top: 0.75em;
+  overflow: hidden;
+}
+
+.section .logo-container .ayas-container .ayas {
+  position: absolute;
+  top: -1.15em;
+  transform: rotateX(180deg);
+  opacity: 0;
+  color: #2b1f31;
+  font-weight: 500;
+}
 
 
 .work2-page {
@@ -1311,7 +1430,6 @@ main {
   background-color: #2b1f31;
   display: flex;
   justify-content: center;
-  /* overflow: hidden; */
 }
 
 #contact-container .water {

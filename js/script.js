@@ -243,7 +243,6 @@
         }, '-=200');
         logo.onmouseover = logo_anime.play
     }
-
     
     function loader_logo_animation() {
 
@@ -394,7 +393,7 @@
     }
 
     imagesLoaded( body, function( instance ) {
-        window.setTimeout(preloader, 500) //7500
+        window.setTimeout(preloader, 7500) //7500
         // console.log('all images are loaded')
         lscroll.start()
         lscroll.update()
@@ -433,7 +432,7 @@
             window.setTimeout(()=>{
                 project_page.style.opacity = 1
             }, 300)
-            })
+        })
     })
 
 //exiting project page
