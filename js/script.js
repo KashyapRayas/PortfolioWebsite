@@ -320,7 +320,7 @@
         .add({
             targets: '#loading .page2',
             keyframes: [
-                {translateY: `-${1.1*window.screen.height}`, duration: 500}
+                {height: 0, duration: 500}
             ]
         }, '-=200')
         .add({
