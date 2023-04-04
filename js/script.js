@@ -314,7 +314,7 @@
         loadexit_anime.add({
             targets: '#loading .page1',
             keyframes: [
-                {translateY: `-${window.innerHeight}`, duration: 800}
+                {translateY: `-${window.screen.height}`, duration: 800}
             ]
         })
         .add({
