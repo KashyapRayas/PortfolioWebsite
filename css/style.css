@@ -1102,6 +1102,13 @@ main {
   left: 35.8vw;
 }
 
+.work3 {
+  top: 52.79vw;
+  width: 27.9vw;
+  height: 19.2vw;
+  left: 38.7vw;
+}
+
 .work_mini:hover {
   background-color: white !important;
 }
@@ -1362,6 +1369,22 @@ main {
 
 
 .work2-page {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  z-index: 30;
+  top: 0;
+  opacity: 0;
+  display: none;
+  transition: all 0.5s linear;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 30vw 59vw 5vw;
+  column-gap: 3vw;
+  overflow: hidden;
+}
+
+.work3-page {
   position: fixed;
   background-color: white;
   width: 100vw;
