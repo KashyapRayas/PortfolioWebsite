@@ -26,6 +26,20 @@
 </head>
 <body>
 
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+  
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
+
     <div class="portrait">
         <h1>Switch to Landscape for a better experience</h1>
     </div>
@@ -87,10 +101,10 @@
                 </div>
         </div>
         <div class="navbar-bottom">
-            <a id="home" onclick='navclick(1)' class="home" href="#">Home</a>
-            <a id="about" onclick='navclick(2)' class="about" href="#">About me</a>
-            <a id="contact" onclick='navclick(4)' class="contact" href="#">Contact</a>
-            <a id="works" onclick='navclick(3)' class="work" href="#">Works</a>
+            <a id="home" onclick='navclick(1)' class="home hoverable" href="#">Home</a>
+            <a id="about" onclick='navclick(2)' class="about hoverable" href="#">About me</a>
+            <a id="contact" onclick='navclick(4)' class="contact hoverable" href="#">Contact</a>
+            <a id="works" onclick='navclick(3)' class="work hoverable" href="#">Works</a>
         </div>
     </div>
 
@@ -146,15 +160,15 @@
                     <img src="assets/rock-top.png" class="rock-top rock">
                 </div>
                 <div data-scroll data-scroll-speed="9" class="tv-rock-container">
-                    <div class="work1 work_mini">
+                    <div class="work1 work_mini hoverable">
                         <h3 class="container-title elements">Personal Brand<br>And Website</h3>
                         <img src="assets/arrow.png" class="arrow elements" alt="">
                     </div>
-                    <div class="work2 work_mini">
+                    <div class="work2 work_mini hoverable">
                         <h3 class="container-title elements">Siggraph BNMIT<br>Branding</h3>
                         <img src="assets/arrow.png" class="arrow elements" alt="">
                     </div>
-                    <div class="work3 work_mini">
+                    <div class="work3 work_mini hoverable">
                         <h3 class="container-title elements">INKTOBER<br>2022</h3>
                         <img src="assets/arrow.png" class="arrow elements" alt="">
                     </div>
@@ -507,6 +521,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.0/baffle.min.js" integrity="sha512-haSDSYvV1BDJYCDs52GczvTcLl3hpw8SK7isG5arkvNdHKBOcOqvl/vjO0qKNtQdZLznXA408zT0tzIamWJgrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
