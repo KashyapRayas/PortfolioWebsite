@@ -251,8 +251,6 @@ circle {
   
 }
 
-
-
 .loading-logo-supercontainer {
   position: relative;
   transform: scale(1.5);
@@ -264,7 +262,6 @@ circle {
   top: 0;
   
 }
-
 
 .loading-logo-container .logo1 .R {
   position: absolute;
@@ -322,6 +319,33 @@ main {
 
 .portrait {
   display: none;
+}
+
+
+.portrait .rock-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait .rock-container .p-rock {
+  padding-top: 20vh;
+  width: 65vw;
+  animation: rockmove 10s ease-in-out 0s infinite;
+}
+
+.portrait .bg-rect {
+  z-index: -1;
+  position: absolute;
+  margin: 0 auto;
+  width: 58vw;
+  height: 100vh;
+  background-color: #5fb9b0;
 }
 
 /* navbar  */
@@ -716,24 +740,6 @@ main {
   animation-iteration-count: infinite;
   pointer-events: none;
 }
-
-/* .speech-bubble {
-  position: absolute;
-  width: 8vw;
-  height: max-content;
-  top: 52vh;
-  left: 52vw;
-  background-color: #413d65;
-  border-radius: 1vw;
-  display: flex;
-}
-
-.speech {
-  padding: 0.5vw;
-  font-size: 1rem;
-  color: #bef992;
-
-} */
 
 #about-container {
   position: relative;
@@ -1680,6 +1686,11 @@ main {
     padding: 10vw;
     font-weight: 600;
     font-size: 7vw;
-    color: #2b1f31;
+    color: #413d65;
+    /* text-transform: uppercase; */
+  }
+
+  .portrait span {
+    color:#2b1f31;
   }
 }
