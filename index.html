@@ -9,6 +9,13 @@
     <meta name="keywords" content="kashyap, rayas, kashyap rayas, creative designer, web designer, graphic designer, portfolio, website">
     <meta name="author" content="Kashyap Rayas">
     <meta name="theme-color" content="#2b1f31"></meta>
+    <meta property="og:title" content="Kashyap Rayas - Creative Designer"/>
+    <meta property="og:image" content="https://i.ibb.co/4Rt98gN/THUMBNAIL.jpg"/>
+    <meta property="og:description" content="I'm 21 years old with a passion for graphic design & creative approaches in art."/>
+    <meta property="og:url" content='kashyaprayas.com'/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+    <meta property="og:type" content='website'/>
     <link rel="preload" as="image" href="assets/underground-cave2.png">
     <link rel="preload" as="image" href="assets/about-rock-falls.webp">
     <link rel="preload" as="image" href="assets/about-rock-front.webp">
@@ -16,9 +23,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    
 </head>
 <body>
+
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big ">
+            <svg height="30" width="30">
+            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+            </svg>
+        </div>
+  
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+            </svg>
+        </div>
+    </div>
 
     <div class="portrait">
         <h1>Switch to Landscape for a better experience</h1>
@@ -81,10 +101,10 @@
                 </div>
         </div>
         <div class="navbar-bottom">
-            <a id="home" onclick='navclick(1)' class="home" href="#">Home</a>
-            <a id="about" onclick='navclick(2)' class="about" href="#">About me</a>
-            <a id="contact" onclick='navclick(4)' class="contact" href="#">Contact</a>
-            <a id="works" onclick='navclick(3)' class="work" href="#">Works</a>
+            <a id="home" onclick='navclick(1)' class="home hoverable" href="#">Home</a>
+            <a id="about" onclick='navclick(2)' class="about hoverable" href="#">About me</a>
+            <a id="contact" onclick='navclick(4)' class="contact hoverable" href="#">Contact</a>
+            <a id="works" onclick='navclick(3)' class="work hoverable" href="#">Works</a>
         </div>
     </div>
 
@@ -129,7 +149,7 @@
                 <div loading="eager" data-scroll data-scroll-speed="4" class="background-rectangle-2"></div>
                 <p data-scroll data-scroll-speed="5" class="hero-text"><span>ABOUT </span>ME</p>
                 <p data-scroll data-scroll-speed="9" data-scroll-call="highlight" class="text1">21<br>YEARS<br>OLD WITH<br>A <span class="highlight">PASSION</span><br>FOR GRAPHIC<br>DESIGN & <span class="highlight">CREATIVE</span><br>APPROACHES IN ART<br><br><span class="text2">CURRENTLY STUDYING<br>COMPUTER<br>SCIENCE<br>ENGINEERING</span></p>
-                <img loading="eager" data-scroll data-scroll-speed="7"  src="assets/face2.png" class="about-face">
+                <img loading="eager" data-scroll data-scroll-speed="7"  src="assets/face2.webp" class="about-face">
                 <img data-scroll data-scroll-speed="2" src="assets/about-rock-back.png" class="rock-back rock">
                 <div loading="eager" class="bottom-cover"></div>
             </div>
@@ -140,14 +160,18 @@
                     <img src="assets/rock-top.png" class="rock-top rock">
                 </div>
                 <div data-scroll data-scroll-speed="9" class="tv-rock-container">
-                    <div class="work1 work_mini">
+                    <div class="work1 work_mini hoverable">
                         <h3 class="container-title elements">Personal Brand<br>And Website</h3>
                         <img src="assets/arrow.png" class="arrow elements" alt="">
                     </div>
-                    <!-- <div class="work2 work_mini">
-                        <h3 class="container-title elements">Personal Brand<br>And Website</h3>
-                        <img src="/assets/arrow.png" class="arrow elements" alt="">
-                    </div> -->
+                    <div class="work2 work_mini hoverable">
+                        <h3 class="container-title elements">Siggraph BNMIT<br>Branding</h3>
+                        <img src="assets/arrow.png" class="arrow elements" alt="">
+                    </div>
+                    <div class="work3 work_mini hoverable">
+                        <h3 class="container-title elements">INKTOBER<br>2022</h3>
+                        <img src="assets/arrow.png" class="arrow elements" alt="">
+                    </div>
                     <img src="assets/tv-rocks.png"  class="tv-rock rock">
                 </div>
                 <div data-scroll data-scroll-speed="7" class="water-bottom"></div>
@@ -238,7 +262,7 @@
                         <br>✦ FIGMA
                         <br>✦ HTML
                         <br>✦ CSS
-                        <br>✦ VANILLA JS
+                        <br>✦ JAVASCRIPT
                     </h3>
                 </div>
             </div>
@@ -248,11 +272,11 @@
                         THE BRIEF
                     </h3>
                     <h3 class="text reveal">
-                        I WANTED TO DESIGN A LOGO THAT DESCRIBED MAINLY 3 IDEAS THAT I LIVE BY WHILE CREATING ART:
-                        <br>✦ CREATIVITY
-                        <br>✦ SIMPLICITY
-                        <br>✦ FLEXIBILITY
-                    <br><br>GREEN IS MY FAVOURITE COLOR, SO I HAD TO DESIGN A COLOR PALETTE THAT FOCUSED ON GREEN. 
+                        I wanted to design a logo that described mainly 3 ideas that I live by while creating art:
+                        <br>✦ Creativity
+                        <br>✦ Simplicity
+                        <br>✦ Flexibility
+                    <br><br>Green is my favourite color, so I had to design a color palette that focused on green. 
                     </h3>
                 </div>
                 <div class="section">
@@ -264,16 +288,16 @@
                         <img loading="lazy" src="assets/showcase.png" class="reveal" alt="">
                     </div>
                     <h3 class="text reveal">
-                        THE LOGO INCLUDES 3 KEY IDEAS:
-                        <br>✦ THE INITIALS OF MY NAME KASHYAP RAYAS
-                        <br>✦ THE K AND R BEING SYMMETRIC BY FLIPPING K VERTICALLY TO PRODUCE R
-                        <br>✦ A COLOR PALETTE WITH GREEN AS THE HERO
+                        The logo includes 3 key ideas:
+                        <br>✦ The initials of my name kashyap rayas
+                        <br>✦ The K and R being symmetric by flipping K vertically to produce R
+                        <br>✦ A color palette with green as the hero
                         <br>
-                        <br>COLOR PALETTE
-                        <br>✦ HERO GREEN: #bef992
-                        <br>✦ SIDEKICK GREEN: #5fb9b0
-                        <br>✦ SIDEKICK VIOLET: #413d65
-                        <br>✦ ANTI-HERO VIOLET: #2b1f31
+                        <br>Color palette
+                        <br>✦ Hero Green: #bef992
+                        <br>✦ Sidekick Green: #5fb9b0
+                        <br>✦ Sidekick Violet: #413d65
+                        <br>✦ Anti-hero Violet: #2b1f31
                     </h3>
                 </div>
                 <div class="section">
@@ -288,14 +312,15 @@
                         <img loading="lazy" src="assets/g5.png" class="reveal" alt="">
                         <img loading="lazy" src="assets/g6.png" class="reveal" alt="">
                     </div>
+                    <div class="home-image">
+                        <img loading="lazy" src="assets/home.png" class="reveal" alt="">
+                    </div>
                     <h3 class="text reveal">
-                        I DESIGNED THE WEBSITE PROTOTYPE USING FIGMA AND PHOTOSHOP. LATER CODED THE WEBSITE USING HTML, CSS AND JAVASCRIPT. 3000 LINES OF CODE LATER, HERE IT IS!
-                        <br>
-                        <br>THE WEBSITE IS A MEDIUM TO SHOWCASE THE CULMINATION OF MY WORK SO FAR, MY KNOWLEDGE GAINED AND MY LOVE FOR GRAPHIC DESIGN.
+                        I wanted to take a different route with my portfolio website. Instead of designing a regular, simple portfolio website, I wanted the viewer to experience a journey, a story. I am the falling man, and as the viewer scrolls, I continue to fall taking the viewer along with me through various sections of the website. I designed the assets using Adobe Photoshop and implemented the website using HTML, CSS and JavaScript. Over 3000 lines of code later, here it is. My first portfolio website. 
                     </h3>
                 </div>
             </div>
-            <div class="close-button-container">
+            <div class="close-button-container hoverable">
                 <div class="close-button1"></div>
                 <div class="close-button2"></div>
                 <div class="close-button3"></div>
@@ -303,21 +328,200 @@
         </div>
 
         <div class="work2-page project-page" id="work2">
-            <h1 class="project-title">PERSONAL<br>BRAND<br>AND<br>WEBSITE</h1>
-            <div class="project-content">
-                <div class="placeholder"></div>
-                <div class="placeholder"></div>
-                <div class="placeholder"></div>
+            <div class="left-section">
+                <h1 class="project-title reveal">SIGGRAPH<br>BNMIT<br>BRANDING</h1>
+                <div class="project-title-section">
+                    <h3 class="project-title-heading reveal">
+                        THE TOOLS
+                    </h3>
+                    <h3 class="project-title-text reveal">
+                        STATIC DESIGN
+                        <br>✦ ADOBE PHOTOSHOP
+                        <br>✦ ADOBE ILLUSTRATOR
+                        <br>
+                        <br>MOTION DESIGN
+                        <br>✦ ADOBE PREMIERE PRO
+                        <br>
+                        <br>WEB DESIGN
+                        <br>✦ FIGMA
+                        <br>✦ HTML
+                        <br>✦ CSS
+                        <br>✦ JAVASCRIPT
+                    </h3>
+                </div>
             </div>
-            <div class="close-button-container">
-                <div class="close-button"></div>
-            </div>  
+            <div class="project-content">
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE BRIEF
+                    </h3>
+                    <h3 class="text reveal">
+                        Siggraph BNMIT is a graphic design club of BNMIT. The club aims to provide a platform to teach, learn and collaborate on everything design related. 
+                        <br><br>I was tasked with designing and developing the brand for the club. 
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE DESIGN
+                    </h3>
+                    <div class="images s2">
+                        <img loading="lazy" src="assets/linework2.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/s1.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/s2.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/s3.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/s4.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/s5.png" class="reveal" alt="">
+                    </div>
+                    <h3 class="text reveal">
+                        The logo includes 3 key ideas:
+                        <br>✦ The letter s composed of I and g
+                        <br>✦ 4 symmetric quadrant design that resembles a graph
+                        <br>✦ Vibrant and multi colored color scheme that represents creativity
+                        <br>
+                        <br>Color palette
+                        <br>✦ 4 primary colors
+                        <br>✦ 1 primary contrast color
+                        <br>✦ 3 secondary colors between each pair of primary colors. 
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE ELEMENTS
+                    </h3>
+                    <div class="images v2">
+                        <img loading="lazy" src="assets/ss1.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/ss2.png" class="reveal" alt="">
+                    </div>
+                    <p class="text sub-text reveal">
+                        Siggraph Document Cover Pages
+                    </p>
+                    <div class="images sv2">
+                        <div class="left-images">
+                            <img loading="lazy" src="assets/sv1.png" class="reveal" alt="">
+                            <img loading="lazy" src="assets/sv2.png" class="reveal" alt="">
+                            <img loading="lazy" src="assets/sv3.png" class="reveal" alt="">
+                        </div>
+                        <div class="right-images">
+                            <img loading="lazy" src="assets/sv4.png" class="reveal" alt="">
+                            <img loading="lazy" src="assets/sv5.png" class="reveal" alt="">
+                        </div>
+                    </div>
+                    <p class="text sub-text reveal">
+                        Siggraph Club Launch Presentation slides
+                    </p>
+                    <h3 class="text reveal">
+                        The club launch event, where individual clubs were introduced and presented to the students was just around the corner. I decided to build a presentation with a nostalgic and fun theme, that theme being comic book batman. Using an old web batman comic book, I replicated, modified and created a vintage comic book batman storyboard merged with Siggraph presentation content.  
+                    </h3>
+                    <div class="images v2">
+                        <img loading="lazy" src="assets/ssv1.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/ssv2.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/ssv3.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/ssv4.png" class="reveal" alt="">
+                    </div>
+                    <p class="text sub-text reveal">
+                        Siggraph Special Day posts
+                    </p>
+                    <div class="laptop-image">
+                        <img loading="lazy" src="assets/laptop.png" class="reveal" alt="">
+                    </div>
+                    <p class="text sub-text reveal">
+                        Siggraph Website <a href="https://siggraphbnmit.github.io/club.github.io/" target="_blank">Link 🡥</a>
+                    </p>
+                    <h3 class="text reveal">
+                        I, along with 2 other web designers were tasked with designing the website for Siggraph BNMIT within 2 weeks. The idea for the website was visualised using Figma and later coded using HTML, CSS and JavaScript.
+                    </h3>
+                </div>
+            </div>
+            <div class="close-button-container hoverable">
+                <div class="close-button1"></div>
+                <div class="close-button2"></div>
+                <div class="close-button3"></div>
+           </div>    
         </div>
+
+        <div class="work3-page project-page" id="work3">
+            <div class="left-section">
+                <h1 class="project-title reveal">INKTOBER<br>2022<br>CHALLENGE</h1>
+                <div class="project-title-section">
+                    <h3 class="project-title-heading reveal">
+                        THE TOOLS
+                    </h3>
+                    <h3 class="project-title-text reveal">
+                        STATIC DESIGN
+                        <br>✦ ADOBE PHOTOSHOP
+                    </h3>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE BRIEF
+                    </h3>
+                    <h3 class="text reveal">
+                        Inktober is an annual art challenge during the month of october, where artists draw one ink drawing every day for each day of october and post it on their social media. A prompt list containing 31 prompts for each day of the month would be shared and artists have to draw something related to the prompt for that day. I too participated in the challenge and decided to ink digitally in Adobe Photoshop.
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE DESIGN
+                    </h3>
+                    <h3 class="text reveal">
+                        I decided to engrave the prompt lettering or idea into my inks by using negative white space. This resulted in designs that required the viewer to look deep to find the interesting bits.
+                    </h3>
+                </div>
+                <div class="section">
+                    <h3 class="heading reveal">
+                        THE ELEMENTS
+                    </h3>
+                    <div class="images v2">
+                        <img loading="lazy" src="assets/PROMPT.jpeg" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_1.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_2.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_3.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_4.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_5.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_6.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_7.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_8.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_9.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_10.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_11.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_12.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_13.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_14.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_15.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_16.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_17.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_18.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_19.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_20.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_21.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_22.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_23.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_24.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_25.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_26.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_27.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_28.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_29.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_30.png" class="reveal" alt="">
+                        <img loading="lazy" src="assets/DAY_31.png" class="reveal" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="close-button-container hoverable">
+                <div class="close-button1"></div>
+                <div class="close-button2"></div>
+                <div class="close-button3"></div>
+           </div>    
+        </div>
+
 
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.0/baffle.min.js" integrity="sha512-haSDSYvV1BDJYCDs52GczvTcLl3hpw8SK7isG5arkvNdHKBOcOqvl/vjO0qKNtQdZLznXA408zT0tzIamWJgrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
