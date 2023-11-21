@@ -1324,9 +1324,9 @@ main {
 }
 
 .project-page .section .v2 {
-  grid-template-columns: 1fr 1fr;
-  column-gap: 1.5em;
-  row-gap: 1.5em;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0em;
+  row-gap: 0em;
 }
 
 .v2 img {
