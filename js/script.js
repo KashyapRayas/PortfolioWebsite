@@ -129,7 +129,7 @@
         }
         if(flag==4) {
             document.querySelector('.contact-name').textContent = 'LINKEDIN'
-            document.querySelector('.contact-value').textContent = 'KASHYAPGRAYAS'
+            document.querySelector('.contact-value').textContent = 'KASHYAPRAYAS'
             var b = baffle(document.querySelector('.contact-name'), {
                 // characters: 'abcdefghijklmnopqrstuvwxyz',
                 characters: ["█", "▓", "▒", "░", "█", "▓", "▒", "░", "█", "▓", "▒", "░", "<", ">", "/"],
