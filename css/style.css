@@ -1324,6 +1324,12 @@ main {
 }
 
 .project-page .section .v2 {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5em;
+  row-gap: 1.5em;
+}
+
+.project-page .section .v3 {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 0em;
   row-gap: 0em;
